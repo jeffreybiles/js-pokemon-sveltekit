@@ -98,7 +98,7 @@ export const lessons: Lesson[] = [
   {
     number: '04',
     name: 'Loading Data from an API',
-    demoSubdomain: '4-loading-data',
+    // demoSubdomain: '4-loading-data',
     description: `<p>Now that we have a basic app, we'll load data from an API.  We'll use the free Pokemon API.</p>
     <p>We'll learn:</p>
     <ul>
@@ -111,7 +111,7 @@ export const lessons: Lesson[] = [
   {
     number: '05',
     name: 'Styling our Pokedex',
-    demoSubdomain: '5-styling-our-pokedex',
+    // demoSubdomain: '5-styling-our-pokedex',
     implementations: [],
     description: `<p>We'll take the raw data from the pokemon API and turn it into a page that's easier to look at and understand.</p>
     <p>There aren't any new framework concepts in this video, and my CSS is not expert-level, so if you want to speedrun this course you can skip to the next lesson and pick up context from there.</p>
@@ -121,7 +121,7 @@ export const lessons: Lesson[] = [
   {
     number: '06',
     name: 'Links and Query Params',
-    demoSubdomain: '6-links-query-params',
+    // demoSubdomain: '6-links-query-params',
     implementations: [],
     description: `<p>Load pokemon data for a specific generation, or for all generations.</p>
     <p>We'll learn:</p>
@@ -133,7 +133,7 @@ export const lessons: Lesson[] = [
   {
     number: '07',
     name: 'Reactivity',
-    demoSubdomain: '7-reactivity',
+    // demoSubdomain: '7-reactivity',
     implementations: [],
     description: `<p>Reactive data is a cornerstone of interactive web apps.  Without it, we'd be reloading pages or updating all the different parts of our app manually.</p>
     <p>In this video we'll select a specific monster, catch multiple monsters, and track how much total HP our caught monsters have.</p>
@@ -147,91 +147,91 @@ export const lessons: Lesson[] = [
   {
     number: '08',
     name: 'Reusable Components',
-    demoSubdomain: '8-reusable-components',
+    // demoSubdomain: '8-reusable-components',
     implementations: [],
   },
   {
     number: '09',
     name: 'Search Form',
-    demoSubdomain: '9-search-form',
+    // demoSubdomain: '9-search-form',
     implementations: [],
   },
   {
     number: '10',
     name: 'Filesystem-Based Router',
-    demoSubdomain: '10-filesystem-based-router',
+    // demoSubdomain: '10-filesystem-based-router',
     implementations: [],
   },
   {
     number: '11',
     name: 'Layouts, Nested Routes, and "breaking out" of Layouts',
-    demoSubdomain: '11-layouts-nested-routes',
+    // demoSubdomain: '11-layouts-nested-routes',
     implementations: [],
   },
   {
     number: '12',
     name: 'Writable and Derived Stores',
-    demoSubdomain: '12-stores-writable-derived',
+    // demoSubdomain: '12-stores-writable-derived',
     implementations: [],
   },
   {
     number: '13',
     name: 'Dynamic Routes',
-    demoSubdomain: '13-dynamic-routes',
+    // demoSubdomain: '13-dynamic-routes',
     implementations: [],
   },
   {
     number: '14',
     name: 'Displaying Species Stats',
-    demoSubdomain: '14-displaying-species-stats',
+    // demoSubdomain: '14-displaying-species-stats',
     implementations: [],
   },
   {
     number: '15',
     name: 'Persisting Data with LocalStorage',
-    demoSubdomain: '15-persisting-data-with-localstorage',
+    // demoSubdomain: '15-persisting-data-with-localstorage',
     implementations: [],
   },
   {
     number: '16',
     name: 'Individualizing Monsters',
-    demoSubdomain: '16-individualizing-monsters',
+    // demoSubdomain: '16-individualizing-monsters',
     implementations: [],
   },
   {
     number: '17',
     name: 'Form actions, use:enhance, and goto',
-    demoSubdomain: '17-form-actions-use-enhance-goto',
+    // demoSubdomain: '17-form-actions-use-enhance-goto',
     implementations: [],
   },
   {
     number: '18',
     name: 'Caught Monsters Page',
-    demoSubdomain: '18-caught-monsters-page',
+    // demoSubdomain: '18-caught-monsters-page',
     implementations: [],
   },
   {
     number: '19',
     name: 'Renaming Monsters',
-    demoSubdomain: '19-renaming-monsters',
+    // demoSubdomain: '19-renaming-monsters',
     implementations: [],
   },
   {
     number: '20',
     name: 'Error Routes and other techniques',
-    demoSubdomain: '20-error-routes',
+    // demoSubdomain: '20-error-routes',
     implementations: [],
   },
   {
     number: '21',
     name: 'Animating our monsters',
-    demoSubdomain: '21-animating-monsters',
+    // demoSubdomain: '21-animating-monsters',
     implementations: [],
   },
   {
     number: '22',
     name: 'Deploying our app',
-    demoSubdomain: '22-deploying-our-app',
+    // demoSubdomain: '22-deploying-our-app',
     implementations: [],
   }
 ]
