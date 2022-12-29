@@ -1,0 +1,1 @@
+export const productionApi = 'pokedex-sveltekit-chi.vercel.app'
