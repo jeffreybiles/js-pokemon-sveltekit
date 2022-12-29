@@ -4,6 +4,7 @@ export type Implementation = {
   youtubeId: string,
 }
 export type Lesson = {
+  number: string,
   name: string,
   demoSubdomain?: string, // only link if there's a demoSubdomain
   implementations: Implementation[],
@@ -12,7 +13,8 @@ export type Lesson = {
 
 export const lessons: Lesson[] = [
   {
-    name: 'Lesson 01 - Choosing a Javascript Framework',
+    number: '01',
+    name: 'Choosing a Javascript Framework',
     demoSubdomain: '1-choosing-a-framework',
     description: `<p>This series will build the same app in 4 different Javascript meta-frameworks - Next 13, Remix 1.10, Nuxt 3, and SvelteKit 1.0</p>
     <p>You can choose to follow only one framework, or watch multiple versions to see how they're similar and different.  If you're not sure which framework you prefer, then definitely watch all the versions of at least this first video.</p>
@@ -43,7 +45,8 @@ export const lessons: Lesson[] = [
     ]
   },
   {
-    name: 'Lesson 02 - Setting up our App',
+    number: '02',
+    name: 'Setting up our App',
     demoSubdomain: '2-setting-up-our-app',
     description: `<p>We'll get our app set up with our chosen framework, then go over the basics of how the pregenerated code works.</p>
     <p>We'll be using TypeScript, but you can follow along in Javascript simply by removing the type annotations.</p>
@@ -78,7 +81,8 @@ export const lessons: Lesson[] = [
     ]
   },
   {
-    name: 'Lesson 03 - Each Loops and Objects',
+    number: '03',
+    name: 'Each Loops and Objects',
     demoSubdomain: '3-each-loops-objects',
     description: `<p>Every app needs to display data, and it's often stored in arrays and objects.</p>
     <p>We'll use hardcoded data for now - the different generations of pokemon games.</p>
@@ -92,7 +96,8 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
-    name: 'Lesson 04 - Loading Data from an API',
+    number: '04',
+    name: 'Loading Data from an API',
     demoSubdomain: '4-loading-data',
     description: `<p>Now that we have a basic app, we'll load data from an API.  We'll use the free Pokemon API.</p>
     <p>We'll learn:</p>
@@ -104,7 +109,8 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
-    name: 'Lesson 05 - Styling our Pokedex',
+    number: '05',
+    name: 'Styling our Pokedex',
     demoSubdomain: '5-styling-our-pokedex',
     implementations: [],
     description: `<p>We'll take the raw data from the pokemon API and turn it into a page that's easier to look at and understand.</p>
@@ -113,7 +119,8 @@ export const lessons: Lesson[] = [
     <p>Note: in production apps I often use tailwind, but I chose to do plain CSS for this series.</p>`,
   },
   {
-    name: 'Lesson 06 - Links and Query Params',
+    number: '06',
+    name: 'Links and Query Params',
     demoSubdomain: '6-links-query-params',
     implementations: [],
     description: `<p>Load pokemon data for a specific generation, or for all generations.</p>
@@ -124,7 +131,8 @@ export const lessons: Lesson[] = [
     </ul>`,
   },
   {
-    name: 'Lesson 07 - Reactivity',
+    number: '07',
+    name: 'Reactivity',
     demoSubdomain: '7-reactivity',
     implementations: [],
     description: `<p>Reactive data is a cornerstone of interactive web apps.  Without it, we'd be reloading pages or updating all the different parts of our app manually.</p>
@@ -137,77 +145,92 @@ export const lessons: Lesson[] = [
     </ul>`,
   },
   {
-    name: 'Lesson 08 - Reusable Components',
+    number: '08',
+    name: 'Reusable Components',
     demoSubdomain: '8-reusable-components',
     implementations: [],
   },
   {
-    name: 'Lesson 09 - Search Form',
+    number: '09',
+    name: 'Search Form',
     demoSubdomain: '9-search-form',
     implementations: [],
   },
   {
-    name: 'Lesson 10 - Filesystem-Based Router',
+    number: '10',
+    name: 'Filesystem-Based Router',
     demoSubdomain: '10-filesystem-based-router',
     implementations: [],
   },
   {
-    name: 'Lesson 11 - Layouts, Nested Routes, and "breaking out" of Layouts',
+    number: '11',
+    name: 'Layouts, Nested Routes, and "breaking out" of Layouts',
     demoSubdomain: '11-layouts-nested-routes',
     implementations: [],
   },
   {
-    name: 'Lesson 12 - Writable and Derived Stores',
+    number: '12',
+    name: 'Writable and Derived Stores',
     demoSubdomain: '12-stores-writable-derived',
     implementations: [],
   },
   {
-    name: 'Lesson 13 - Dynamic Routes',
+    number: '13',
+    name: 'Dynamic Routes',
     demoSubdomain: '13-dynamic-routes',
     implementations: [],
   },
   {
-    name: 'Lesson 14 - Displaying Species Stats',
+    number: '14',
+    name: 'Displaying Species Stats',
     demoSubdomain: '14-displaying-species-stats',
     implementations: [],
   },
   {
-    name: 'Lesson 15 - Persisting Data with LocalStorage',
+    number: '15',
+    name: 'Persisting Data with LocalStorage',
     demoSubdomain: '15-persisting-data-with-localstorage',
     implementations: [],
   },
   {
-    name: 'Lesson 16 - Individualizing Monsters',
+    number: '16',
+    name: 'Individualizing Monsters',
     demoSubdomain: '16-individualizing-monsters',
     implementations: [],
   },
   {
-    name: 'Lesson 17 - Form actions, use:enhance, and goto',
+    number: '17',
+    name: 'Form actions, use:enhance, and goto',
     demoSubdomain: '17-form-actions-use-enhance-goto',
     implementations: [],
   },
   {
-    name: 'Lesson 18 - Caught Monsters Page',
+    number: '18',
+    name: 'Caught Monsters Page',
     demoSubdomain: '18-caught-monsters-page',
     implementations: [],
   },
   {
-    name: 'Lesson 19 - Renaming Monsters',
+    number: '19',
+    name: 'Renaming Monsters',
     demoSubdomain: '19-renaming-monsters',
     implementations: [],
   },
   {
-    name: 'Lesson 20 - Error Routes and other techniques',
+    number: '20',
+    name: 'Error Routes and other techniques',
     demoSubdomain: '20-error-routes',
     implementations: [],
   },
   {
-    name: 'Lesson 21 - Animating our monsters',
+    number: '21',
+    name: 'Animating our monsters',
     demoSubdomain: '21-animating-monsters',
     implementations: [],
   },
   {
-    name: 'Lesson 22 - Deploying our app',
+    number: '22',
+    name: 'Deploying our app',
     demoSubdomain: '22-deploying-our-app',
     implementations: [],
   }
