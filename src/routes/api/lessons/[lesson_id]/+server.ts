@@ -3,7 +3,7 @@ import { lessons } from "../lessons"
 import { error } from "@sveltejs/kit";
 
 export const GET = (({ params }) => {
-  const lesson = lessons.find(lesson => lesson.id === params.lesson_id);
+  const lesson = lessons.find(lesson => lesson.id == params.lesson_id);
   if(!lesson) {
     throw error(404, 'No lesson with that ID found');
   }
