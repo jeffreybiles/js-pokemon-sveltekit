@@ -1,5 +1,6 @@
 <script lang="ts">
 import type { PageData } from './$types';
+import { page } from '$app/stores';
   
 export let data: PageData;
 import Iconify from '@iconify/svelte';
@@ -20,8 +21,12 @@ I can also save the framework preference easily in localstorage
 
 <div class="container">
   <div class="lessons-sidebar">
+    <a class="lesson" class:active={!$page.params.lesson_id} href="/">
+      <div class="lesson-number"></div>
+      <div class="lesson-title">Home</div>
+    </a>
     {#each data.lessons as lesson}
-    <a class="lesson" href="/lessons/{lesson.id}">
+    <a class="lesson" class:active={lesson.id == $page.params.lesson_id} href="/lessons/{lesson.id}">
       <div class="lesson-number">{lesson.number}</div>
       <div class="lesson-title">{lesson.name}</div>
       {#if lesson.implementations.length > 0}
@@ -45,14 +50,25 @@ I can also save the framework preference easily in localstorage
 </div>
 
 <style>
+/* resetting */
+:global(body) {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
 .container {
   display: flex;
   flex-direction: row;
+  margin: 0;
+  padding: 0;
 }
 .lessons-sidebar {
+  margin: 0;
   font-family: sans-serif;
   border-right: 1px solid #ccc;
-  height: 100%;
+  height: 100vh;
+  max-height: 100vh;
+  overflow-y: auto;
 }
 .lesson {
   display: grid;
@@ -63,6 +79,10 @@ I can also save the framework preference easily in localstorage
   font-weight: 300;
   color: #555;
   text-decoration: none;
+}
+.lesson.active, .lesson.active div {
+  background-color: #333;
+  color: #fff;
 }
 .lesson:hover, .lesson:hover div {
   background-color: #333;
