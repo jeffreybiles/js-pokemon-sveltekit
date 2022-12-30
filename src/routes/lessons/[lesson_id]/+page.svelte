@@ -8,8 +8,12 @@
   $: previousLesson = data.previousLesson;
   $: nextLesson = data.nextLesson;
 
-  let selectedFramework = 'SvelteKit 1.0';
+  let selectedFramework = localStorage.getItem('selectedFramework') || 'SvelteKit 1.0';
   $: selectedImplementation = lesson.implementations.find(implementation => implementation.framework === selectedFramework);
+  const selectFramework = (framework: string) => {
+    selectedFramework = framework;
+    localStorage.setItem('selectedFramework', framework);
+  }
 </script>
 
 
@@ -21,8 +25,8 @@
       {#each lesson.implementations as implementation}
         <div
           class="tab {implementation.framework == selectedFramework ? 'selected' : ''}"
-          on:click={() => selectedFramework = implementation.framework}
-          on:keypress={() => selectedFramework = implementation.framework}
+          on:click={() => selectFramework(implementation.framework)}
+          on:keypress={() => selectFramework(implementation.framework)}
         >
           <div>{implementation.framework}</div>
         </div>
