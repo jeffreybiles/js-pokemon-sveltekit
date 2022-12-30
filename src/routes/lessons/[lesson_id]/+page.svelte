@@ -37,21 +37,16 @@
       <a class="tab" href="https://www.youtube.com/watch?v={selectedImplementation?.youtubeId}">Watch on YouTube</a>
     </div>
   </div>
-  <div class="content">
-    <div class="button-links">
-      
-    </div>
-    <div class="video">
-      <iframe
-        width="100%"
-        height="100%"
-        src="https://www.youtube.com/embed/{selectedImplementation?.youtubeId}"
-        title="YouTube video player"
-        frameborder="0"
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      ></iframe>
-    </div>
+  <div class="video">
+    <iframe
+      width="100%"
+      height="100%"
+      src="https://www.youtube.com/embed/{selectedImplementation?.youtubeId}"
+      title="YouTube video player"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+    ></iframe>
   </div>
 {:else}
   <div class="tab">
@@ -114,18 +109,6 @@
     border-left: black 1px solid;
   }
 
-  .content {
-    background-color: #333333;
-    padding: 8px;
-    border: none;
-  }
-
-  .button-links {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
-    margin-bottom: 8px;
-  }
 
   .video {
     width: 100%;

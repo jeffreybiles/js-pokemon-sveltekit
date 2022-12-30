@@ -66,6 +66,8 @@ I can also save the framework preference easily in localstorage
   margin: 0;
   font-family: sans-serif;
   border-right: 1px solid #ccc;
+}
+.lessons-sidebar, .main-content {
   height: 100vh;
   max-height: 100vh;
   overflow-y: auto;
@@ -110,8 +112,7 @@ I can also save the framework preference easily in localstorage
   justify-content: center;
 }
 .main-content {
-  padding: 16px;
-  padding-top: 0;
+  padding: 0 16px;
   width: 100%;
 }
 </style>

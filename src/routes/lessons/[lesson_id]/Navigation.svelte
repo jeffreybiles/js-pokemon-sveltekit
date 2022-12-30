@@ -21,9 +21,6 @@
       </div>
     {/if}
   </div>
-  <div class="index-button">
-    <a class="button" href="/">Index</a>
-  </div>
   <div class="next-button">
     {#if nextLesson}
       <a class="button" href="/lessons/{nextLesson.id}">
@@ -42,9 +39,9 @@
 <style>
   .navigation-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
-  .previous-button, .next-button, .index-button {
+  .previous-button, .next-button {
     display: flex;
     justify-content: center;
     border: 1px solid black;
