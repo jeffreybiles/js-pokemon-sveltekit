@@ -9,6 +9,7 @@ export type Lesson = {
   demoSubdomain?: string, // only link if there's a demoSubdomain
   implementations: Implementation[],
   description?: string,
+  projectedRelease?: string,
 }
 
 export const lessons: Lesson[] = [
@@ -84,6 +85,7 @@ export const lessons: Lesson[] = [
     number: '03',
     name: 'Each Loops and Objects',
     demoSubdomain: '3-each-loops-objects',
+    projectedRelease: 'January 22',
     description: `<p>Every app needs to display data, and it's often stored in arrays and objects.</p>
     <p>We'll use hardcoded data for now - the different generations of pokemon games.</p>
     <p>We'll learn:</p>
@@ -98,6 +100,7 @@ export const lessons: Lesson[] = [
   {
     number: '04',
     name: 'Loading Data from an API',
+    projectedRelease: 'January 22',
     // demoSubdomain: '4-loading-data',
     description: `<p>Now that we have a basic app, we'll load data from an API.  We'll use the free Pokemon API.</p>
     <p>We'll learn:</p>
@@ -111,6 +114,7 @@ export const lessons: Lesson[] = [
   {
     number: '05',
     name: 'Styling our Pokedex',
+    projectedRelease: 'January 22',
     // demoSubdomain: '5-styling-our-pokedex',
     implementations: [],
     description: `<p>We'll take the raw data from the pokemon API and turn it into a page that's easier to look at and understand.</p>
@@ -121,6 +125,7 @@ export const lessons: Lesson[] = [
   {
     number: '06',
     name: 'Links and Query Params',
+    projectedRelease: 'January 29',
     // demoSubdomain: '6-links-query-params',
     implementations: [],
     description: `<p>Load pokemon data for a specific generation, or for all generations.</p>
@@ -133,6 +138,7 @@ export const lessons: Lesson[] = [
   {
     number: '07',
     name: 'Reactivity',
+    projectedRelease: 'February 5',
     // demoSubdomain: '7-reactivity',
     implementations: [],
     description: `<p>Reactive data is a cornerstone of interactive web apps.  Without it, we'd be reloading pages or updating all the different parts of our app manually.</p>
@@ -147,90 +153,105 @@ export const lessons: Lesson[] = [
   {
     number: '08',
     name: 'Reusable Components',
+    projectedRelease: 'February 12',
     // demoSubdomain: '8-reusable-components',
     implementations: [],
   },
   {
     number: '09',
     name: 'Search Form',
+    projectedRelease: 'February 19',
     // demoSubdomain: '9-search-form',
     implementations: [],
   },
   {
     number: '10',
     name: 'Filesystem-Based Router',
+    projectedRelease: 'February 26',
     // demoSubdomain: '10-filesystem-based-router',
     implementations: [],
   },
   {
     number: '11',
     name: 'Layouts, Nested Routes, and "breaking out" of Layouts',
+    projectedRelease: 'March 5',
     // demoSubdomain: '11-layouts-nested-routes',
     implementations: [],
   },
   {
     number: '12',
     name: 'Writable and Derived Stores',
+    projectedRelease: 'March 12',
     // demoSubdomain: '12-stores-writable-derived',
     implementations: [],
   },
   {
     number: '13',
     name: 'Dynamic Routes',
+    projectedRelease: 'March 19',
     // demoSubdomain: '13-dynamic-routes',
     implementations: [],
   },
   {
     number: '14',
     name: 'Displaying Species Stats',
+    projectedRelease: 'March 26',
     // demoSubdomain: '14-displaying-species-stats',
     implementations: [],
   },
   {
     number: '15',
     name: 'Persisting Data with LocalStorage',
+    projectedRelease: 'April 2',
     // demoSubdomain: '15-persisting-data-with-localstorage',
     implementations: [],
   },
   {
     number: '16',
     name: 'Individualizing Monsters',
+    projectedRelease: 'April 9',
     // demoSubdomain: '16-individualizing-monsters',
     implementations: [],
   },
   {
     number: '17',
     name: 'Form actions, use:enhance, and goto',
+    projectedRelease: 'April 16',
     // demoSubdomain: '17-form-actions-use-enhance-goto',
     implementations: [],
   },
   {
     number: '18',
     name: 'Caught Monsters Page',
+    projectedRelease: 'April 23',
     // demoSubdomain: '18-caught-monsters-page',
     implementations: [],
   },
   {
     number: '19',
     name: 'Renaming Monsters',
+    projectedRelease: 'April 30',
     // demoSubdomain: '19-renaming-monsters',
     implementations: [],
   },
   {
     number: '20',
     name: 'Error Routes and other techniques',
+    projectedRelease: 'May 7',
     // demoSubdomain: '20-error-routes',
     implementations: [],
   },
   {
     number: '21',
     name: 'Animating our monsters',
+    projectedRelease: 'May 14',
     // demoSubdomain: '21-animating-monsters',
     implementations: [],
   },
   {
     number: '22',
     name: 'Deploying our app',
+    projectedRelease: 'May 21',
     // demoSubdomain: '22-deploying-our-app',
     implementations: [],
   }
