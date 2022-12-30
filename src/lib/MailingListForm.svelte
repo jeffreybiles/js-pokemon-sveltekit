@@ -32,3 +32,15 @@
   <input type="text" name="name" id="name" bind:value={name} />
   <button type="submit">Submit</button>
 </form>
+
+<style>
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input, button {
+    padding: 8px;
+    margin-bottom: 16px;
+    margin-top: 4px;
+  }
+</style>
