@@ -9,6 +9,9 @@ const config = {
 
 	kit: {
 		adapter: adapter()
+	},
+	paths: {
+		"$lib/*": ["src/lib/*"],
 	}
 };
 
