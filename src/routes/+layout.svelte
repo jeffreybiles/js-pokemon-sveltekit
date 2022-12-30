@@ -75,7 +75,7 @@ I can also save the framework preference easily in localstorage
 .lesson {
   display: grid;
   grid-template-columns: 30px 1fr 80px;
-  padding: 4px;
+  padding: 8px 0;
   border-bottom: 1px solid #ccc;
   font-size: 16px;
   font-weight: 300;
