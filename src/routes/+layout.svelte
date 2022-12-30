@@ -64,6 +64,10 @@ I can also save the framework preference easily in localstorage
   color: #555;
   text-decoration: none;
 }
+.lesson:hover, .lesson:hover div {
+  background-color: #333;
+  color: #fff;
+}
 .lesson-number, .lesson-implementations, .projected-release-date {
   display: flex;
   align-items: center;
