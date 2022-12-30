@@ -4,6 +4,8 @@ export type Implementation = {
   youtubeId: string,
 }
 export type Lesson = {
+  id: string,
+  number: string,
   name: string,
   demoSubdomain?: string, // only link if there's a demoSubdomain
   implementations: Implementation[],

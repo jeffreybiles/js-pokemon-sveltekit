@@ -1,1 +1,1 @@
-export const productionApi = 'js-pokemon-sveltekit.vercel.app/'
+export const productionApi = 'js-pokemon.com'

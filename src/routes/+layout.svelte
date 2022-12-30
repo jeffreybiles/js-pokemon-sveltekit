@@ -1,29 +1,22 @@
 <script lang="ts">
-  import LessonNavModal from '$lib/LessonNavModal.svelte';
+  import { productionApi } from '$lib/production-api';
   import type { LayoutData } from './$types';
-    import type { Lesson } from './api/lessons/lessons';
+  import type { Lesson } from './api/lessons/lessons';
   
   export let data: LayoutData;
 
-  // Temporary values...
-  let lessonModalOpen = false;
   $: lesson = data.lesson as Lesson
-
 </script>
 
-
-{#if lessonModalOpen}  
-  <LessonNavModal 
-    lesson={data.lesson}
-    previousLesson={data.previousLesson}
-    nextLesson={data.nextLesson}
-    close={() => lessonModalOpen = false}
-  />
-{/if}
 {#if lesson}
-  <button class="lesson-modal-button" on:click={() => lessonModalOpen = true}>
+  <!-- svelte-ignore security-anchor-rel-noreferrer -->
+  <a
+    class="lesson-modal-button"
+    href="https://{productionApi}/lessons/{lesson.id}"
+    target="_blank"
+  >
     Tutorials for making this site in {lesson.implementations.map(implementation => implementation.framework).join(', ')}
-  </button>
+  </a>
 {/if}
 
 <slot />
@@ -42,5 +35,6 @@
     border-radius: 8px;
     box-shadow: 0 0 40px 10px rgba(0, 0, 0, 0.7);
     border: none;
+    text-decoration: none;
   }
 </style>
