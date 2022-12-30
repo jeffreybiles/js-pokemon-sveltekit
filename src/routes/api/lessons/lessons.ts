@@ -4,6 +4,7 @@ export type Implementation = {
   youtubeId: string,
 }
 export type Lesson = {
+  id: string,
   number: string,
   name: string,
   demoSubdomain?: string, // only link if there's a demoSubdomain
@@ -14,6 +15,7 @@ export type Lesson = {
 
 export const lessons: Lesson[] = [
   {
+    id: '101',
     number: '01',
     name: 'Choosing a Javascript Framework',
     demoSubdomain: '1-choosing-a-framework',
@@ -46,6 +48,7 @@ export const lessons: Lesson[] = [
     ]
   },
   {
+    id: '102',
     number: '02',
     name: 'Setting up our App',
     demoSubdomain: '2-setting-up-our-app',
@@ -82,6 +85,7 @@ export const lessons: Lesson[] = [
     ]
   },
   {
+    id: '103',
     number: '03',
     name: 'Each Loops and Objects',
     demoSubdomain: '3-each-loops-objects',
@@ -98,6 +102,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '104',
     number: '04',
     name: 'Loading Data from an API',
     projectedRelease: 'January 22',
@@ -112,6 +117,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '105',
     number: '05',
     name: 'Styling our Pokedex',
     projectedRelease: 'January 22',
@@ -123,6 +129,7 @@ export const lessons: Lesson[] = [
     <p>Note: in production apps I often use tailwind, but I chose to do plain CSS for this series.</p>`,
   },
   {
+    id: '106',
     number: '06',
     name: 'Links and Query Params',
     projectedRelease: 'January 29',
@@ -136,6 +143,7 @@ export const lessons: Lesson[] = [
     </ul>`,
   },
   {
+    id: '107',
     number: '07',
     name: 'Reactivity',
     projectedRelease: 'February 5',
@@ -151,6 +159,7 @@ export const lessons: Lesson[] = [
     </ul>`,
   },
   {
+    id: '108',
     number: '08',
     name: 'Reusable Components',
     projectedRelease: 'February 12',
@@ -158,6 +167,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '109',
     number: '09',
     name: 'Search Form',
     projectedRelease: 'February 19',
@@ -165,6 +175,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '110',
     number: '10',
     name: 'Filesystem-Based Router',
     projectedRelease: 'February 26',
@@ -172,6 +183,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '111',
     number: '11',
     name: 'Layouts, Nested Routes, and "breaking out" of Layouts',
     projectedRelease: 'March 5',
@@ -179,6 +191,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '112',
     number: '12',
     name: 'Writable and Derived Stores',
     projectedRelease: 'March 12',
@@ -186,6 +199,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '113',
     number: '13',
     name: 'Dynamic Routes',
     projectedRelease: 'March 19',
@@ -193,6 +207,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '114',
     number: '14',
     name: 'Displaying Species Stats',
     projectedRelease: 'March 26',
@@ -200,6 +215,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '115',
     number: '15',
     name: 'Persisting Data with LocalStorage',
     projectedRelease: 'April 2',
@@ -207,6 +223,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '116',
     number: '16',
     name: 'Individualizing Monsters',
     projectedRelease: 'April 9',
@@ -214,6 +231,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '117',
     number: '17',
     name: 'Form actions, use:enhance, and goto',
     projectedRelease: 'April 16',
@@ -221,6 +239,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '118',
     number: '18',
     name: 'Caught Monsters Page',
     projectedRelease: 'April 23',
@@ -228,6 +247,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '119',
     number: '19',
     name: 'Renaming Monsters',
     projectedRelease: 'April 30',
@@ -235,6 +255,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '120',
     number: '20',
     name: 'Error Routes and other techniques',
     projectedRelease: 'May 7',
@@ -242,6 +263,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '121',
     number: '21',
     name: 'Animating our monsters',
     projectedRelease: 'May 14',
@@ -249,6 +271,7 @@ export const lessons: Lesson[] = [
     implementations: [],
   },
   {
+    id: '122',
     number: '22',
     name: 'Deploying our app',
     projectedRelease: 'May 21',
