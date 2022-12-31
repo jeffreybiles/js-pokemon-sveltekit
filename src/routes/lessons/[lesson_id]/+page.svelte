@@ -1,7 +1,8 @@
 <script lang="ts">
+  import MailingListForm from "$lib/MailingListForm.svelte";
   import type { Lesson } from "src/routes/api/lessons/lessons";
   import type { PageData } from './$types';
-    import Navigation from "./Navigation.svelte";
+  import Navigation from "./Navigation.svelte";
   export let data: PageData;
   
   $: lesson = data.lesson as Lesson;
@@ -58,13 +59,14 @@
   nextLesson={nextLesson}
 />
 
-
 {#if lesson.description}
   <div class="description">
     {@html lesson.description}
   </div>
 {/if}
 
+<h1>Be the first to hear about new lessons!</h1>
+<MailingListForm />
 
 <style>
   .lesson-title {

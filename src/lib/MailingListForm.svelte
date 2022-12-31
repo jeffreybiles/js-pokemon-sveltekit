@@ -45,7 +45,7 @@
   form {
     display: flex;
     flex-direction: column;
-    width: 600px;
+    max-width: 600px;
   }
   button {
     cursor: pointer;
