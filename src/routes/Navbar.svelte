@@ -38,6 +38,7 @@
 @media (max-width: 600px) {
   .navbar .open-sidebar {
     display: block;
+    cursor: pointer;
   }
 }
 </style>
