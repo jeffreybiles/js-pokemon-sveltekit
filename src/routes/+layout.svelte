@@ -115,4 +115,9 @@ I can also save the framework preference easily in localstorage
   padding: 0 16px;
   width: 100%;
 }
+
+:global(*) {
+  font-family: system-ui,-apple-system,Segoe UI,Roboto,Ubuntu,Cantarell,Noto Sans,sans-serif,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol"
+}
+
 </style>
