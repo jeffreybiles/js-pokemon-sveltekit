@@ -10,12 +10,12 @@
 <div class="navigation-buttons">
   <div class="previous-button">
     {#if previousLesson}
-      <a class="button" href="/lessons/{previousLesson.id}">
+      <a class="button hoverable-button" href="/lessons/{previousLesson.id}">
         <Icon icon="carbon:arrow-left" />
         Previous
       </a>
     {:else}
-      <div class="button disabled">
+      <div class="button hoverable-button disabled">
         <Icon icon="carbon:arrow-left" />
         Previous
       </div>
@@ -23,12 +23,12 @@
   </div>
   <div class="next-button">
     {#if nextLesson}
-      <a class="button" href="/lessons/{nextLesson.id}">
+      <a class="button hoverable-button" href="/lessons/{nextLesson.id}">
         Next
         <Icon icon="carbon:arrow-right" />
       </a>
     {:else}
-      <div class="button disabled">
+      <div class="button hoverable-button disabled">
         Next
         <Icon icon="carbon:arrow-right" />
       </div>
@@ -60,9 +60,6 @@
     padding: 8px 16px;
     width: 100%;
     font-size: 16px;
-    background-color: #fff;
-    color: black;
-    cursor: pointer;
     border: none;
     text-decoration: none;
     display: flex;
@@ -72,12 +69,5 @@
   .button.disabled {
     opacity: 0.5;
     cursor: not-allowed;
-  }
-  .button:hover {
-    background-color: #555555;
-    color: white;
-  }
-  .button {
-    font-family: sans-serif;
   }
 </style>

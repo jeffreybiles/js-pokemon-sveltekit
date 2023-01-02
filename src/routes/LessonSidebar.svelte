@@ -16,12 +16,12 @@
 </script>
 
 <div class="lessons-sidebar">
-  <a class="lesson" class:active={!selectedLessonId} href="/">
+  <a class="lesson hoverable-button" class:active={!selectedLessonId} href="/">
     <div class="lesson-number"></div>
     <div class="lesson-title">Home</div>
   </a>
   {#each lessons as lesson}
-    <a class="lesson" class:active={lesson.id == selectedLessonId} href="/lessons/{lesson.id}">
+    <a class="lesson hoverable-button" class:active={lesson.id == selectedLessonId} href="/lessons/{lesson.id}">
       <div class="lesson-number">{lesson.number}</div>
       <div class="lesson-title">{lesson.name}</div>
       {#if lesson.implementations.length > 0}
@@ -41,12 +41,12 @@
 </div>
 
 <style>
-  .lessons-sidebar {
+.lessons-sidebar {
   margin: 0;
   font-family: sans-serif;
   border-right: 1px solid #ccc;
 }
-.lessons-sidebar, .main-content {
+.lessons-sidebar {
   height: 100vh;
   max-height: 100vh;
   overflow-y: auto;
@@ -54,21 +54,11 @@
 .lesson {
   display: grid;
   grid-template-columns: 30px 1fr 80px;
-  padding: 8px 0;
   border-bottom: 1px solid #ccc;
-  font-size: 16px;
-  font-weight: 300;
-  color: #555;
   text-decoration: none;
+  padding: 8px 0;
 }
-.lesson.active, .lesson.active div {
-  background-color: #333;
-  color: #fff;
-}
-.lesson:hover, .lesson:hover div {
-  background-color: #333;
-  color: #fff;
-}
+
 .lesson-number, .lesson-implementations, .projected-release-date {
   display: flex;
   align-items: center;
