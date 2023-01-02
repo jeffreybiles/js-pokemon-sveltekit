@@ -103,6 +103,19 @@
     border-left: black 1px solid;
   }
 
+  @media (max-width: 600px) {
+    .tab-bar {
+      flex-direction: column-reverse;
+    }
+    .tab {
+      font-size: 12px;
+      padding: 4px 6px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+    }
+  }
+
 
   .video {
     width: 100%;
