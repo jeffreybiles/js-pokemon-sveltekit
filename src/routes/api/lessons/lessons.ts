@@ -13,6 +13,8 @@ export type Lesson = {
   projectedRelease?: string,
 }
 
+// TODO - go over the descriptions as I release lessons, because I'm sure I could make them better
+// TODO - allow different descriptions for different frameworks.  Not sure how to display that.
 export const lessons: Lesson[] = [
   {
     id: '101',
@@ -96,7 +98,7 @@ export const lessons: Lesson[] = [
     <ul>
       <li>How to loop through data in the template</li>
       <li>How to reference objects</li>
-      <li>What happens if you try to display a full object in the template</li>
+      <li>How to use the pokemon generations data</li>
     </ul>
   `,
     implementations: [],
@@ -110,9 +112,10 @@ export const lessons: Lesson[] = [
     description: `<p>Now that we have a basic app, we'll load data from an API.  We'll use the free Pokemon API.</p>
     <p>We'll learn:</p>
     <ul>
-      <li>How to load data from an API</li>
-      <li>How to get the pokemon ID and image url from the index data</li>
-      <li>Using the loaded data in our template</li>
+      <li>How to load data from an external API</li>
+      <li>Making SSR work using SvelteKit's 'load' function</li>
+      <li>How to use pageData in the route component</li>
+      <li>How to get the pokemon ID from the API data</li>
     </ul>`,
     implementations: [],
   },
@@ -165,6 +168,15 @@ export const lessons: Lesson[] = [
     projectedRelease: 'February 12',
     // demoSubdomain: '8-reusable-components',
     implementations: [],
+    description: `
+      <p>We want to display our selected monster better, so we could either copy/paste everything... or we could make a reusable component.</p>
+      <p>We'll learn:</p>
+      <ul>
+        <li>How to create a reusable component</li>
+        <li>How to pass data to a component</li>
+        <li>How CSS is scoped to a component</li>
+        <li>How to use slots</li>
+      </ul>`
   },
   {
     id: '109',
@@ -173,6 +185,14 @@ export const lessons: Lesson[] = [
     projectedRelease: 'February 19',
     // demoSubdomain: '9-search-form',
     implementations: [],
+    description: `
+      <p>We'll add a search form to our app, and use it to filter the list of monsters.</p>
+      <p>We'll learn:</p>
+      <ul>
+        <li>How to create a form</li>
+        <li>How to use a form submit to trigger a function</li>
+        <li>How to filter data based on dynamic parameters</li>
+      </ul>`
   },
   {
     id: '110',
@@ -181,6 +201,14 @@ export const lessons: Lesson[] = [
     projectedRelease: 'February 26',
     // demoSubdomain: '10-filesystem-based-router',
     implementations: [],
+    description: `
+      <p>We want to add new pages to our app - an 'about' page explaining the app, and a 'my-pokemon' page showing your caught monsters.
+      <p>We'll learn:</p>
+      <ul>
+        <li>How to add a new route</li>
+        <li>How to navigate between routes</li>
+        <li>The file-based router's naming scheme</li>
+      </ul>`
   },
   {
     id: '111',
@@ -189,14 +217,29 @@ export const lessons: Lesson[] = [
     projectedRelease: 'March 5',
     // demoSubdomain: '11-layouts-nested-routes',
     implementations: [],
+    description:`
+      <p>We want to add a navbar to our app, to make it easier to navigate between pages.</p>
+      <p>We'll learn:</p>
+      <ul>
+        <li>How to add a layout</li>
+        <li>How to add nested routes</li>
+        <li>How to "break out" of a layout</li>
+      </ul>
+    `
   },
   {
     id: '112',
     number: '12',
-    name: 'Writable and Derived Stores',
+    name: 'Sharing data across the app',
     projectedRelease: 'March 12',
     // demoSubdomain: '12-stores-writable-derived',
     implementations: [],
+    // TODO: may need to make implementation-specific descriptions?  Start with regular description, then do implementation-specific?
+    description: `
+      <p>We want to fill out the 'my-pokemon' page in our app, to show the monsters we've caught.</p>
+      <p>To do that, we'll need to track that data across components.</p>
+      <p>In Svelte, this is done with 'stores', and we'll learn about writable and observable stores.</p>
+      <p>In Nuxt this is done with 'composables', and we'll learn about a simple pattern to make this happen.</p>`
   },
   {
     id: '113',
@@ -205,6 +248,16 @@ export const lessons: Lesson[] = [
     projectedRelease: 'March 19',
     // demoSubdomain: '13-dynamic-routes',
     implementations: [],
+    description: `
+      <p>We want to add a page to our app that shows the details of a specific monster.</p>
+      <p>However, we can't add a new route for every monster - instead, we'll add one route that can handle any monster.</p>
+      <p>We'll get the monster_id from the route, then use that to load the monster's data.</p>
+      <p>We'll learn:</p>
+      <ul>
+        <li>How to add a dynamic route</li>
+        <li>How to get the route params</li>
+        <li>How to use the route params to load data</li>
+      </ul>`
   },
   {
     id: '114',
@@ -213,6 +266,12 @@ export const lessons: Lesson[] = [
     projectedRelease: 'March 26',
     // demoSubdomain: '14-displaying-species-stats',
     implementations: [],
+    description: `
+      <p>Which pokemon is strongest?</p>
+      <p>We're going to add a chart that shows the stats for each species of monster</p>
+      <p>This lesson combines a lot of what we've learned instead of teaching something completel new, so we'll be going fast!</p>
+
+    `
   },
   {
     id: '115',
@@ -221,6 +280,16 @@ export const lessons: Lesson[] = [
     projectedRelease: 'April 2',
     // demoSubdomain: '15-persisting-data-with-localstorage',
     implementations: [],
+    description: `
+      <p>We want to persist the data about which monsters we've caught, so that it's still there when we reload the page.</p>
+      <p>We'll use localStorage to do this.  In a production app we'd typically use a server, but I want this tutorial to be as easy to follow as possible, and opening up a publicly-usable API means we'd need to cover authentication, which would greatly increase the size of this tutorial.</p>
+      <p>We'll learn:</p>
+      <ul>
+        <li>How to put data into localStorage and pull it back out</li>
+        <li>How to 'load up' the app-wide stores upon page load</li>
+        <li>How to handle server-side rendering with localStorage - tricky, since there's no localStorage on the server!</li>
+      </ul>
+    `
   },
   {
     id: '116',
@@ -229,22 +298,44 @@ export const lessons: Lesson[] = [
     projectedRelease: 'April 9',
     // demoSubdomain: '16-individualizing-monsters',
     implementations: [],
+    description: `
+      <p>We want to be able to tell apart our monsters, and choose which ones to release - instead of just releasing a random one of a certain species.</p>
+      <p>To do this, we'll change the way we're tracking monsters - we'll keep an array of monsters and connect them to the species with species_id.  We'll also add a random name and random ID.</p>
+      <p>Using the ID, we'll be able to Create, Read, Update, and Delete specific items in the monsters array.</p>
+      <p>We'll learn how to do the standard CRUD actions:</p>
+      <ul>
+        <li>CREATE: catch a new monster and assign a random name</li>
+        <li>READ: get a specific monster from the array</li>
+        <li>UPDATE: rename a specific monster, assigning it a new random name</li>
+        <li>DELETE: release a specific monster</li>
+      </ul>`
   },
   {
     id: '117',
     number: '17',
+    // TODO - make this generic.  How?  Hard
     name: 'Form actions, use:enhance, and goto',
     projectedRelease: 'April 16',
     // demoSubdomain: '17-form-actions-use-enhance-goto',
     implementations: [],
+    description: `
+      <p>SvelteKit wants us to use forms in the 'classic' way, like we did before SPAs became popular</p>
+      <p>However, we want to use forms in the 'modern' way, where we can submit the form and have the page update without a full page reload.</p>
+      <p>We'll learn how combine the best of both worlds with Form Actions, the 'use:enhance' directive, the 'goto' action.</p>
+    `,
   },
   {
     id: '118',
     number: '18',
-    name: 'Caught Monsters Page',
+    name: 'Caught Monster Page',
     projectedRelease: 'April 23',
-    // demoSubdomain: '18-caught-monsters-page',
+    // demoSubdomain: '18-caught-monster-page',
     implementations: [],
+    description: `
+      <p>We want to add a page to our app that shows the details of a specific caught monster.</p>
+      <p>We'll create a new nested route with the monster ID, and then use the Stats component to display the monster's stats.</p>
+      <p>We'll expand the Monster data and Stats to use a monster's 'nature', which causes one stat to increase by 10% and another to decrease by 10%.</p>
+    `
   },
   {
     id: '119',
@@ -253,6 +344,9 @@ export const lessons: Lesson[] = [
     projectedRelease: 'April 30',
     // demoSubdomain: '19-renaming-monsters',
     implementations: [],
+    description: `
+      <p>We want to be able to rename our monsters.</p>
+      <p>We'll add a form to our monster detail page, and use what we've learned so far to make it a smooth experience.</p>`
   },
   {
     id: '120',
@@ -261,6 +355,11 @@ export const lessons: Lesson[] = [
     projectedRelease: 'May 7',
     // demoSubdomain: '20-error-routes',
     implementations: [],
+    description: `
+      <p>What happens when things go wrong?</p>
+      <p>We'll show two ways to handle errors:</p>
+      <p>In the first, we'll use the '+error' route to show a custom error page.  This is good for catching things that happen in the loader and form actions.</p>
+      <p>In the second, we'll handle an error that happens in the frontend code.</p>`
   },
   {
     id: '121',
@@ -269,6 +368,9 @@ export const lessons: Lesson[] = [
     projectedRelease: 'May 14',
     // demoSubdomain: '21-animating-monsters',
     implementations: [],
+    description: `
+      <p>Let's add some animations to our app!</p>
+    `
   },
   {
     id: '122',
@@ -277,5 +379,9 @@ export const lessons: Lesson[] = [
     projectedRelease: 'May 21',
     // demoSubdomain: '22-deploying-our-app',
     implementations: [],
+    description: `
+      <p>Now that we've built our app, let's deploy it!</p>
+      <p>We'll use Vercel to deploy our app, although there are lots of other fantastic hosting providers out there.</p>
+    `
   }
 ]
