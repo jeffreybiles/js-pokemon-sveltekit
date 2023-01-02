@@ -54,4 +54,9 @@ import LessonSidebar from './LessonSidebar.svelte';
   color: #fff;
 }
 
+:global(.hoverable-button.active:hover), :global(.hoverable-button.active:hover div) {
+  background-color: #222;
+  color: #fff;
+}
+
 </style>
