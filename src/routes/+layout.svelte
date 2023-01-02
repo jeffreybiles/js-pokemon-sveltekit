@@ -1,12 +1,14 @@
 <script lang="ts">
 import type { PageData } from './$types';
 import { page } from '$app/stores';
-  
+
 export let data: PageData;
 import LessonSidebar from './LessonSidebar.svelte';
+import Navbar from './Navbar.svelte';
 
 </script>
 
+<Navbar />
 <div class="container">
   <LessonSidebar lessons={data.lessons} selectedLessonId={$page.params.lesson_id} />
   <div class="main-content">

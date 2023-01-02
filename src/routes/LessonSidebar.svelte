@@ -4,7 +4,15 @@
 
   export let lessons: Lesson[] = []
   export let selectedLessonId: string = ''
+  import { sidebarOpen } from '../stores';
+  import { onMount } from 'svelte';
 
+  const closeIfSmallScreen = () => {
+    if(window.innerWidth < 600) {
+      $sidebarOpen = false;
+    }
+  };
+  onMount(closeIfSmallScreen)
 
   const frameworkIcons = {
     'Next 13': 'logos:nextjs-icon',
@@ -12,16 +20,13 @@
     'Nuxt 3': 'vscode-icons:file-type-nuxt',
     'SvelteKit 1.0': 'vscode-icons:file-type-svelte',
   }
-
-  let collapsed = false;
-
 </script>
 
-{#if collapsed}
+{#if !$sidebarOpen}
   <div
     class="lessons-sidebar collapsed hoverable-button active"
-    on:click={() => collapsed = false}
-    on:keydown={(e) => { if (e.key === 'Enter') { collapsed = false; }}}
+    on:click={() => $sidebarOpen = true}
+    on:keydown={(e) => { if (e.key === 'Enter') { $sidebarOpen = true; }}}
   >
     <Iconify icon="material-symbols:keyboard-double-arrow-right" />
   </div>
@@ -29,8 +34,8 @@
   <div class="lessons-sidebar">
     <div
       class="collapse-button hoverable-button"
-      on:click={() => collapsed = true}
-      on:keydown={(e) => { if (e.key === 'Enter') { collapsed = true; }}}
+      on:click={() => $sidebarOpen = false}
+      on:keydown={(e) => { if (e.key === 'Enter') { $sidebarOpen = false; }}}
     >
       <Iconify icon="material-symbols:keyboard-double-arrow-left" />
     </div>
@@ -40,7 +45,12 @@
     </a>
 
     {#each lessons as lesson}
-      <a class="lesson hoverable-button" class:active={lesson.id == selectedLessonId} href="/lessons/{lesson.id}">
+      <a
+        class="lesson hoverable-button"
+        class:active={lesson.id == selectedLessonId}
+        href="/lessons/{lesson.id}"
+        on:click={closeIfSmallScreen}
+      >
         <div class="lesson-number">{lesson.number}</div>
         <div class="lesson-title">{lesson.name}</div>
         {#if lesson.implementations.length > 0}
@@ -116,5 +126,15 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+@media (max-width: 600px) {
+  .lessons-sidebar.collapsed {
+    display: none;
+  }
+  .lessons-sidebar {
+    position: absolute;
+    background: #fff;
+  }
 }
 </style>
