@@ -10,6 +10,7 @@
     on:keydown={(e) => { if (e.key === 'Enter') { $sidebarOpen = !$sidebarOpen; } }}
   >
     <Iconify icon="mdi:menu" />
+    <div class="text">Menu</div>
   </div>
   <a href="/" class="logo">JS Pokemon Tutorial</a>
   <div class="links">
@@ -35,10 +36,15 @@
 .navbar .open-sidebar {
   display: none;
 }
+
 @media (max-width: 700px) {
   .navbar .open-sidebar {
-    display: block;
+    display: flex;
+    align-items: center;
     cursor: pointer;
+  }
+  .open-sidebar .text {
+    padding-left: 4px;
   }
 }
 </style>

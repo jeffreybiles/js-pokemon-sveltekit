@@ -8,11 +8,14 @@ import Navbar from './Navbar.svelte';
 
 </script>
 
-<Navbar />
 <div class="container">
   <LessonSidebar lessons={data.lessons} selectedLessonId={$page.params.lesson_id} />
-  <div class="main-content">
-    <slot />
+  <div class="main-content-container">
+    <Navbar />
+
+    <div class="main-content">
+      <slot />
+    </div>
   </div>
 </div>
 
@@ -30,12 +33,14 @@ import Navbar from './Navbar.svelte';
   padding: 0;
 }
 
-.main-content {
-  padding: 0 16px;
+.main-content-container {
   width: 100%;
   height: 100vh;
   max-height: 100vh;
   overflow-y: auto;
+}
+.main-content {
+  padding: 0 16px;
 }
 
 :global(*) {
