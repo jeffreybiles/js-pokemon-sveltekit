@@ -87,7 +87,7 @@ export const lessons: Lesson[] = [
     number: '03',
     name: 'Each Loops and Objects',
     demoSubdomain: '03-each-loops',
-    projectedRelease: 'January 22',
+    projectedRelease: 'January',
     description: `<p>Every app needs to display data, and it's often stored in arrays and objects.</p>
     <p>We'll use hardcoded data for now - the different generations of pokemon games.</p>
     <p>We'll learn:</p>
@@ -109,7 +109,6 @@ export const lessons: Lesson[] = [
     id: '104',
     number: '04',
     name: 'Loading Data from an API',
-    projectedRelease: 'January 22',
     demoSubdomain: '04-loading-external-data',
     description: `<p>Now that we have a basic app, we'll load data from an API.  We'll use the free Pokemon API.</p>
     <p>We'll learn:</p>
@@ -131,7 +130,7 @@ export const lessons: Lesson[] = [
     id: '105',
     number: '05',
     name: 'Styling our Pokedex',
-    projectedRelease: 'January 22',
+    projectedRelease: 'January',
     // demoSubdomain: '5-styling-our-pokedex',
     implementations: [],
     description: `<p>We'll take the raw data from the pokemon API and turn it into a page that's easier to look at and understand.</p>
@@ -143,7 +142,7 @@ export const lessons: Lesson[] = [
     id: '106',
     number: '06',
     name: 'Links and Query Params',
-    projectedRelease: 'January 29',
+    projectedRelease: 'January',
     // demoSubdomain: '6-links-query-params',
     implementations: [],
     description: `<p>Load pokemon data for a specific generation, or for all generations.</p>
@@ -157,7 +156,7 @@ export const lessons: Lesson[] = [
     id: '107',
     number: '07',
     name: 'Reactivity',
-    projectedRelease: 'February 5',
+    projectedRelease: 'January',
     // demoSubdomain: '7-reactivity',
     implementations: [],
     description: `<p>Reactive data is a cornerstone of interactive web apps.  Without it, we'd be reloading pages or updating all the different parts of our app manually.</p>
@@ -173,7 +172,7 @@ export const lessons: Lesson[] = [
     id: '108',
     number: '08',
     name: 'Reusable Components',
-    projectedRelease: 'February 12',
+    projectedRelease: 'January',
     // demoSubdomain: '8-reusable-components',
     implementations: [],
     description: `
@@ -190,7 +189,7 @@ export const lessons: Lesson[] = [
     id: '109',
     number: '09',
     name: 'Search Form',
-    projectedRelease: 'February 19',
+    projectedRelease: 'January',
     // demoSubdomain: '9-search-form',
     implementations: [],
     description: `
@@ -206,7 +205,7 @@ export const lessons: Lesson[] = [
     id: '110',
     number: '10',
     name: 'Filesystem-Based Router',
-    projectedRelease: 'February 26',
+    projectedRelease: 'February',
     // demoSubdomain: '10-filesystem-based-router',
     implementations: [],
     description: `
@@ -222,7 +221,7 @@ export const lessons: Lesson[] = [
     id: '111',
     number: '11',
     name: 'Layouts, Nested Routes, and "breaking out" of Layouts',
-    projectedRelease: 'March 5',
+    projectedRelease: 'February',
     // demoSubdomain: '11-layouts-nested-routes',
     implementations: [],
     description:`
@@ -239,7 +238,7 @@ export const lessons: Lesson[] = [
     id: '112',
     number: '12',
     name: 'Sharing data across the app',
-    projectedRelease: 'March 12',
+    projectedRelease: 'February',
     // demoSubdomain: '12-stores-writable-derived',
     implementations: [],
     // TODO: may need to make implementation-specific descriptions?  Start with regular description, then do implementation-specific?
@@ -253,7 +252,7 @@ export const lessons: Lesson[] = [
     id: '113',
     number: '13',
     name: 'Dynamic Routes',
-    projectedRelease: 'March 19',
+    projectedRelease: 'February',
     // demoSubdomain: '13-dynamic-routes',
     implementations: [],
     description: `
@@ -271,7 +270,7 @@ export const lessons: Lesson[] = [
     id: '114',
     number: '14',
     name: 'Displaying Species Stats',
-    projectedRelease: 'March 26',
+    projectedRelease: 'February',
     // demoSubdomain: '14-displaying-species-stats',
     implementations: [],
     description: `
@@ -285,7 +284,7 @@ export const lessons: Lesson[] = [
     id: '115',
     number: '15',
     name: 'Persisting Data with LocalStorage',
-    projectedRelease: 'April 2',
+    projectedRelease: 'February',
     // demoSubdomain: '15-persisting-data-with-localstorage',
     implementations: [],
     description: `
@@ -303,7 +302,7 @@ export const lessons: Lesson[] = [
     id: '116',
     number: '16',
     name: 'Individualizing Monsters',
-    projectedRelease: 'April 9',
+    projectedRelease: 'March',
     // demoSubdomain: '16-individualizing-monsters',
     implementations: [],
     description: `
@@ -323,7 +322,7 @@ export const lessons: Lesson[] = [
     number: '17',
     // TODO - make this generic.  How?  Hard
     name: 'Form actions, use:enhance, and goto',
-    projectedRelease: 'April 16',
+    projectedRelease: 'March',
     // demoSubdomain: '17-form-actions-use-enhance-goto',
     implementations: [],
     description: `
@@ -336,7 +335,7 @@ export const lessons: Lesson[] = [
     id: '118',
     number: '18',
     name: 'Caught Monster Page',
-    projectedRelease: 'April 23',
+    projectedRelease: 'March',
     // demoSubdomain: '18-caught-monster-page',
     implementations: [],
     description: `
@@ -349,7 +348,7 @@ export const lessons: Lesson[] = [
     id: '119',
     number: '19',
     name: 'Renaming Monsters',
-    projectedRelease: 'April 30',
+    projectedRelease: 'March',
     // demoSubdomain: '19-renaming-monsters',
     implementations: [],
     description: `
@@ -360,7 +359,7 @@ export const lessons: Lesson[] = [
     id: '120',
     number: '20',
     name: 'Error Routes and other techniques',
-    projectedRelease: 'May 7',
+    projectedRelease: 'March',
     // demoSubdomain: '20-error-routes',
     implementations: [],
     description: `
@@ -373,7 +372,7 @@ export const lessons: Lesson[] = [
     id: '121',
     number: '21',
     name: 'Animating our monsters',
-    projectedRelease: 'May 14',
+    projectedRelease: 'March',
     // demoSubdomain: '21-animating-monsters',
     implementations: [],
     description: `
@@ -384,7 +383,7 @@ export const lessons: Lesson[] = [
     id: '122',
     number: '22',
     name: 'Deploying our app',
-    projectedRelease: 'May 21',
+    projectedRelease: 'March',
     // demoSubdomain: '22-deploying-our-app',
     implementations: [],
     description: `
