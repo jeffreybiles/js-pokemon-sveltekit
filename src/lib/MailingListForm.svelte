@@ -34,7 +34,7 @@
   form {
     display: flex;
     flex-direction: column;
-    max-width: 600px;
+    max-width: 700px;
   }
   button {
     cursor: pointer;

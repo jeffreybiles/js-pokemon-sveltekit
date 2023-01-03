@@ -35,7 +35,7 @@
 .navbar .open-sidebar {
   display: none;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .navbar .open-sidebar {
     display: block;
     cursor: pointer;

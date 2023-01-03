@@ -105,11 +105,22 @@
     border-left: black 1px solid;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 1400px) {
+    .tab {
+      font-size: 18px;
+      padding: 6px 12px;
+    }
+  }
+  @media (max-width: 1060px) {
+    .tab {
+      font-size: 14px;
+    }
+  }
+  @media (max-width: 700px) {
     .tab-bar {
       flex-direction: column-reverse;
     }
-    .tab {
+    .tab, .hoverable-button {
       font-size: 12px;
       padding: 4px 6px;
       flex-grow: 1;

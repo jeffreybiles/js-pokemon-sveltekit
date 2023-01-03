@@ -8,7 +8,7 @@
   import { onMount } from 'svelte';
 
   const closeIfSmallScreen = () => {
-    if(window.innerWidth < 600) {
+    if(window.innerWidth < 700) {
       $sidebarOpen = false;
     }
   };
@@ -75,6 +75,7 @@
   margin: 0;
   font-family: sans-serif;
   border-right: 1px solid #ccc;
+  z-index: 1;
 }
 .lessons-sidebar.collapsed {
   display: flex;
@@ -128,7 +129,7 @@
   justify-content: center;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 700px) {
   .lessons-sidebar.collapsed {
     display: none;
   }
