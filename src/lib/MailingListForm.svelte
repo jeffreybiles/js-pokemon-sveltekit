@@ -2,10 +2,6 @@
 <!-- Then use it in multiple places -->
 
 <script lang="ts">
-    import { goto } from "$app/navigation";
-
-
-  let name = "";
   let email = "";
   let hidden = "";
 
@@ -16,13 +12,8 @@
     }
     const response = await fetch("/api/mailing-list", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        email,
-        name,
-      }),
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ email }),
     });
     if (response.ok) {
       alert("Thanks for signing up!");
@@ -35,8 +26,6 @@
 <form on:submit|preventDefault={submit}>
   <label for="email">Email</label>
   <input type="email" name="email" id="email" bind:value={email} />
-  <label for="name">Name</label>
-  <input type="text" name="name" id="name" bind:value={name} />
   <input type="text" name="honeypot" id="honeypot" bind:value={hidden} />
   <button type="submit">Submit</button>
 </form>

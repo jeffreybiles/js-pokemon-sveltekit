@@ -11,13 +11,10 @@ const headers = {
 }
 
 export const POST = (async ({ request, fetch }) => {
-  const { email, name } = await request.json()
+  const { email } = await request.json()
   const url = '/api/subscribers'
   const inputData = {
     email,
-    fields: {
-      name,
-    },
     groups: [
       '76293075379422706' // js-pokemon group
     ]
