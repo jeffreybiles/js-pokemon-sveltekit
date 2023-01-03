@@ -1,9 +1,13 @@
 <script lang="ts">
+  import { browser } from "$app/environment";
   import { tick } from "svelte";
 
   let email = "";
   let hidden = "";
-  let previousEmail = localStorage.getItem("email");
+  let previousEmail: string | null = "";
+  if(browser) {
+    previousEmail = localStorage.getItem("email");
+  }
 
   const submit = async () => {
     if(hidden) {
@@ -33,7 +37,7 @@
 
 <div class="mailing-list">
   {#if previousEmail}
-    <div>You're signed up for the mailing list at {previousEmail}.</div>
+    <div style="padding-bottom: 4px;">You're signed up for the mailing list at {previousEmail}.</div>
     <!-- svelte-ignore a11y-invalid-attribute -->
     <a href="#" on:click={newAddress}>Sign up with a different address?</a>
   {:else}
@@ -51,13 +55,13 @@
 <style>
   .mailing-list {
     padding: 16px;
-    background-color: rgb(200, 229, 239);
-    border-radius: 20px;
+    border: 1px solid rgb(170, 170, 170);
+    border-radius: 8px;
     max-width: 700px;
   }
   .title {
     font-size: 44px;
-    margin: 16px 0;
+    margin: 0;
   }
   .title, p, div {
     color: #333;
@@ -77,7 +81,7 @@
     margin-bottom: 16px;
     margin-top: 4px;
     border: 1px solid #AAA;
-    border-radius: 8px;
+    border-radius: 6px;
     font-size: 20px;
   }
   #honeypot {
