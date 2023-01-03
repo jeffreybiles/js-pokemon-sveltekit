@@ -1,6 +1,6 @@
 export type Implementation = {
   framework: 'SvelteKit 1.0' | 'Nuxt 3' | 'Next 13' | 'Remix 1.10',
-  githubUrl: string,
+  githubUrl?: string,
   youtubeId: string,
 }
 export type Lesson = {
@@ -29,22 +29,18 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        githubUrl: 'https://github.com/jeffreybiles/evil-commerce/commits/lesson-01',
         youtubeId: '_FJy4yUSmfc', // note: this is not actually the video for this lesson, this is a random video
       },
       { // note: this is not actually created yet, but I'm leaving it here as a placeholder
         framework: 'Nuxt 3',
-        githubUrl: '',
         youtubeId: '0W16DJeAsFM',
       },
       { // note: this is not actually created yet, but I'm leaving it here as a placeholder
         framework: 'Next 13',
-        githubUrl: '',
         youtubeId: 'ypY-HuJP95k',
       },
       { // note: this is not actually created yet, but I'm leaving it here as a placeholder
         framework: 'Remix 1.10',
-        githubUrl: '',
         youtubeId: 'ypY-HuJP95k',
       }
     ]
@@ -53,7 +49,7 @@ export const lessons: Lesson[] = [
     id: '102',
     number: '02',
     name: 'Setting up our App',
-    demoSubdomain: '2-setting-up-our-app',
+    demoSubdomain: '02-setup',
     description: `<p>We'll get our app set up with our chosen framework, then go over the basics of how the pregenerated code works.</p>
     <p>We'll be using TypeScript, but you can follow along in Javascript simply by removing the type annotations.</p>
     <p>We'll learn:</p>
@@ -90,7 +86,7 @@ export const lessons: Lesson[] = [
     id: '103',
     number: '03',
     name: 'Each Loops and Objects',
-    demoSubdomain: '3-each-loops-objects',
+    demoSubdomain: '03-each-loops',
     projectedRelease: 'January 22',
     description: `<p>Every app needs to display data, and it's often stored in arrays and objects.</p>
     <p>We'll use hardcoded data for now - the different generations of pokemon games.</p>
@@ -114,7 +110,7 @@ export const lessons: Lesson[] = [
     number: '04',
     name: 'Loading Data from an API',
     projectedRelease: 'January 22',
-    // demoSubdomain: '4-loading-data',
+    demoSubdomain: '04-loading-external-data',
     description: `<p>Now that we have a basic app, we'll load data from an API.  We'll use the free Pokemon API.</p>
     <p>We'll learn:</p>
     <ul>
