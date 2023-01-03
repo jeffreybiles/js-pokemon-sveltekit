@@ -19,8 +19,7 @@ export const POST = (async ({ request, fetch }) => {
       name,
     },
     groups: [
-      // TODO - create new group for pokedex, replace this with that group
-      '72511539330942367' // SquirrelLock Holmes group
+      '76293075379422706' // js-pokemon group
     ]
   }
 
