@@ -42,7 +42,7 @@ export const lessons: Lesson[] = [
         githubUrl: '',
         youtubeId: 'ypY-HuJP95k',
       },
-      {
+      { // note: this is not actually created yet, but I'm leaving it here as a placeholder
         framework: 'Remix 1.10',
         githubUrl: '',
         youtubeId: 'ypY-HuJP95k',
@@ -66,8 +66,8 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        githubUrl: 'https://github.com/jeffreybiles/evil-commerce/commits/lesson-01',
-        youtubeId: '_FJy4yUSmfc', // note: this is not actually the video for this lesson, this is a random video
+        githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/2b834f9b789e591a66de81d767be4ed089b88157',
+        youtubeId: 'VG7U1ESkbdE',
       },
       { // note: this is not actually created yet, but I'm leaving it here as a placeholder
         framework: 'Nuxt 3',
@@ -79,7 +79,7 @@ export const lessons: Lesson[] = [
         githubUrl: '',
         youtubeId: 'ypY-HuJP95k',
       },
-      {
+      { // note: this is not actually created yet, but I'm leaving it here as a placeholder
         framework: 'Remix 1.10',
         githubUrl: '',
         youtubeId: 'ypY-HuJP95k',
@@ -101,7 +101,13 @@ export const lessons: Lesson[] = [
       <li>How to use the pokemon generations data</li>
     </ul>
   `,
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/4e1239dd40be8057a807d34a489ab0f81a76035e',
+        youtubeId: 'i2F1YcjALfo',
+      }
+    ],
   },
   {
     id: '104',
@@ -117,7 +123,13 @@ export const lessons: Lesson[] = [
       <li>How to use pageData in the route component</li>
       <li>How to get the pokemon ID from the API data</li>
     </ul>`,
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/0b2408df3606070e4b9d28a3f30a88f371b32b0c',
+        youtubeId: 'n1oyh99Bwlg',
+      }
+    ],
   },
   {
     id: '105',
