@@ -68,7 +68,6 @@
   </div>
 {/if}
 
-<h1>Be the first to hear about new lessons!</h1>
 <MailingListForm />
 
 <style>

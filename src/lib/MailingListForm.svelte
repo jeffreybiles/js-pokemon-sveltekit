@@ -1,9 +1,9 @@
-<!-- TODO - make this nicer and styled (it's mostly copilot-generated) -->
-<!-- Then use it in multiple places -->
-
 <script lang="ts">
+  import { tick } from "svelte";
+
   let email = "";
   let hidden = "";
+  let previousEmail = localStorage.getItem("email");
 
   const submit = async () => {
     if(hidden) {
@@ -16,33 +16,69 @@
       body: JSON.stringify({ email }),
     });
     if (response.ok) {
+      localStorage.setItem("email", email);
+      previousEmail = email;
       alert("Thanks for signing up!");
     } else {
       alert("Something went wrong. Please try again.");
     }
-  };  
+  };
+  const newAddress = async () => {
+    localStorage.removeItem("email");
+    previousEmail = "";
+    await tick()
+    document.getElementById("email")?.focus();
+  };
 </script>
 
-<form on:submit|preventDefault={submit}>
-  <label for="email">Email</label>
-  <input type="email" name="email" id="email" bind:value={email} />
-  <input type="text" name="honeypot" id="honeypot" bind:value={hidden} />
-  <button type="submit">Submit</button>
-</form>
+<div class="mailing-list">
+  {#if previousEmail}
+    <div>You're signed up for the mailing list at {previousEmail}.</div>
+    <!-- svelte-ignore a11y-invalid-attribute -->
+    <a href="#" on:click={newAddress}>Sign up with a different address?</a>
+  {:else}
+    <h2 class="title">Weekly videos in your inbox</h2>
+    <p>Get notified when new lessons are released, and when Jeffrey's creating other cool projects.</p>
+    <form on:submit|preventDefault={submit}>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" bind:value={email} />
+      <input type="text" name="honeypot" id="honeypot" bind:value={hidden} />
+      <button type="submit">Learn JS frameworks</button>
+    </form>
+  {/if}
+</div>
 
 <style>
+  .mailing-list {
+    padding: 16px;
+    background-color: rgb(200, 229, 239);
+    border-radius: 20px;
+    max-width: 700px;
+  }
+  .title {
+    font-size: 44px;
+    margin: 16px 0;
+  }
+  .title, p, div {
+    color: #333;
+  }
   form {
     display: flex;
     flex-direction: column;
     max-width: 700px;
+    color: #555;
   }
   button {
     cursor: pointer;
+    color: #555
   }
   input, button {
     padding: 8px;
     margin-bottom: 16px;
     margin-top: 4px;
+    border: 1px solid #AAA;
+    border-radius: 8px;
+    font-size: 20px;
   }
   #honeypot {
     visibility: hidden;
