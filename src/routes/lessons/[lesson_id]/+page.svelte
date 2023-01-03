@@ -57,7 +57,9 @@
     Coming soon!  Projected release date: {lesson.projectedRelease}
   </div>
 {/if}
+
 <Navigation
+  lesson={lesson}
   previousLesson={previousLesson}
   nextLesson={nextLesson}
 />

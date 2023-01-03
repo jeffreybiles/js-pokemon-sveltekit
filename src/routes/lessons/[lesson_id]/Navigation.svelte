@@ -3,6 +3,7 @@
 
   import type { Lesson } from "src/routes/api/lessons/lessons";
 
+  export let lesson: Lesson;
   export let previousLesson: Lesson;
   export let nextLesson: Lesson;
 </script>
@@ -21,6 +22,22 @@
       </div>
     {/if}
   </div>
+  <div class="demo-button">
+    {#if lesson.demoSubdomain}
+      <!-- svelte-ignore security-anchor-rel-noreferrer -->
+      <a
+        class="button hoverable-button"
+        href="https://{lesson.demoSubdomain}.js-pokemon.com" target="_blank"
+      >
+        Explore demo
+      </a>
+    {:else}
+      <div class="button hoverable-button disabled">
+        Explore demo (coming soon)
+      </div>
+    {/if}
+  </div>
+
   <div class="next-button">
     {#if nextLesson}
       <a class="button hoverable-button" href="/lessons/{nextLesson.id}">
@@ -39,9 +56,9 @@
 <style>
   .navigation-buttons {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
-  .previous-button, .next-button {
+  .previous-button, .next-button, .demo-button {
     display: flex;
     justify-content: center;
     border: 1px solid black;
