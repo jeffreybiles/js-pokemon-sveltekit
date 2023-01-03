@@ -35,7 +35,9 @@
       {/each}
     </div>
     <div class="tabs">
-      <a class="tab hoverable-button" href={selectedImplementation?.githubUrl}>Code Branch</a>
+      {#if selectedImplementation?.githubUrl}
+        <a class="tab hoverable-button" href={selectedImplementation.githubUrl}>Code Branch</a>
+      {/if}
       <a class="tab hoverable-button" href="https://www.youtube.com/watch?v={selectedImplementation?.youtubeId}">Watch on YouTube</a>
     </div>
   </div>
