@@ -8,7 +8,6 @@ import Navbar from './Navbar.svelte';
 import Toast from '$lib/Toast.svelte';
 import { browser } from '$app/environment';
 import { webVitals } from '$lib/vitals';
-import Analytics from '$lib/Analytics.svelte';
 
 import { inject } from '@vercel/analytics';
 inject();
@@ -36,7 +35,6 @@ $: if (browser && analyticsId) {
 </div>
 
 <Toast />
-<Analytics />
 
 <style>
 /* resetting */
