@@ -2,10 +2,11 @@
   import MailingListForm from "$lib/MailingListForm.svelte";
   import Iconify from "@iconify/svelte";
   import { frameworkArray } from "$lib/frameworks";
+  import { goto } from "$app/navigation";
 
   const startLearning = (framework: string) => {
     localStorage.setItem('selectedFramework', framework);
-    window.location.href = '/lessons/101';
+    goto('/lessons/101');
   }
 </script>
 <h1>Welcome to the Pokedex Tutorial</h1>
