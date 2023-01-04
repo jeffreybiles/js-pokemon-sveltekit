@@ -153,9 +153,10 @@ export const lessons: Lesson[] = [
     // demoSubdomain: '7-reactivity',
     implementations: [],
     description: `<p>Reactive data is a cornerstone of interactive web apps.  Without it, we'd be reloading pages or updating all the different parts of our app manually.</p>
-    <p>In this video we'll select a specific monster, catch multiple monsters, and track how much total HP our caught monsters have.</p>
+    <p>In this video we'll go over the basics of Svelte's reactivity system, learn how to interact with html elements, and then use those skills to select a specific monster.</p>
     <p>We'll learn:</p>
     <ul>
+      <li>How to call a function by clicking an html element</li>
       <li>How to create and use reactive properties</li>
       <li>How to compute/derive properties</li>
       <li>How to 'watch' properties and take action when they change</li>
