@@ -148,20 +148,6 @@ export const lessons: Lesson[] = [
   {
     id: '106',
     number: '06',
-    name: 'Links and Query Params',
-    projectedRelease: 'January',
-    // demoSubdomain: '6-links-query-params',
-    implementations: [],
-    description: `<p>Load pokemon data for a specific generation, or for all generations.</p>
-    <p>We'll learn:</p>
-    <ul>
-      <li>How to use links to navigate between pages</li>
-      <li>How to use query params to change our load function</li>
-    </ul>`,
-  },
-  {
-    id: '107',
-    number: '07',
     name: 'Reactivity',
     projectedRelease: 'January',
     // demoSubdomain: '7-reactivity',
@@ -174,6 +160,19 @@ export const lessons: Lesson[] = [
       <li>How to compute/derive properties</li>
       <li>How to 'watch' properties and take action when they change</li>
     </ul>`,
+  },
+  {
+    id: '107',
+    number: '07',
+    name: 'Links and Query Params',
+    projectedRelease: 'January',
+    // demoSubdomain: '6-links-query-params',
+    implementations: [],
+    description: `
+      <p>We want to save which pokemon is highlighted, and be able to share it with others.</p>
+      <p>To build this feature, we'll learn how to use links and query params.</p>
+      <p>Note that there are other, more robust ways of building this feature... and we'll explore one of them when we get to dynamic routes and layouts.  But for now, this will do.</p>
+    `
   },
   {
     id: '108',
@@ -195,6 +194,16 @@ export const lessons: Lesson[] = [
   {
     id: '109',
     number: '09',
+    name: 'Loading pokemon by generation',
+    projectedRelease: 'January',
+    implementations: [],
+    description: `<p>Load pokemon data for a specific generation, or for all generations.</p>
+    <p>To build this feature, we'll combine our knowledge of links and query params, reactivity, and the load function.</p>
+    `,
+  },
+  {
+    id: '110',
+    number: '10',
     name: 'Search Form',
     projectedRelease: 'January',
     // demoSubdomain: '9-search-form',
@@ -209,8 +218,8 @@ export const lessons: Lesson[] = [
       </ul>`
   },
   {
-    id: '110',
-    number: '10',
+    id: '111',
+    number: '11',
     name: 'Filesystem-Based Router',
     projectedRelease: 'February',
     // demoSubdomain: '10-filesystem-based-router',
@@ -225,8 +234,8 @@ export const lessons: Lesson[] = [
       </ul>`
   },
   {
-    id: '111',
-    number: '11',
+    id: '112',
+    number: '12',
     name: 'Layouts, Nested Routes, and "breaking out" of Layouts',
     projectedRelease: 'February',
     // demoSubdomain: '11-layouts-nested-routes',
@@ -242,8 +251,8 @@ export const lessons: Lesson[] = [
     `
   },
   {
-    id: '112',
-    number: '12',
+    id: '113',
+    number: '13',
     name: 'Sharing data across the app',
     projectedRelease: 'February',
     // demoSubdomain: '12-stores-writable-derived',
@@ -256,8 +265,8 @@ export const lessons: Lesson[] = [
       <p>In Nuxt this is done with 'composables', and we'll learn about a simple pattern to make this happen.</p>`
   },
   {
-    id: '113',
-    number: '13',
+    id: '114',
+    number: '14',
     name: 'Dynamic Routes',
     projectedRelease: 'February',
     // demoSubdomain: '13-dynamic-routes',
@@ -274,8 +283,8 @@ export const lessons: Lesson[] = [
       </ul>`
   },
   {
-    id: '114',
-    number: '14',
+    id: '115',
+    number: '15',
     name: 'Displaying Species Stats',
     projectedRelease: 'February',
     // demoSubdomain: '14-displaying-species-stats',
@@ -288,8 +297,8 @@ export const lessons: Lesson[] = [
     `
   },
   {
-    id: '115',
-    number: '15',
+    id: '116',
+    number: '16',
     name: 'Persisting Data with LocalStorage',
     projectedRelease: 'February',
     // demoSubdomain: '15-persisting-data-with-localstorage',
@@ -306,8 +315,8 @@ export const lessons: Lesson[] = [
     `
   },
   {
-    id: '116',
-    number: '16',
+    id: '117',
+    number: '17',
     name: 'Individualizing Monsters',
     projectedRelease: 'March',
     // demoSubdomain: '16-individualizing-monsters',
@@ -325,8 +334,8 @@ export const lessons: Lesson[] = [
       </ul>`
   },
   {
-    id: '117',
-    number: '17',
+    id: '118',
+    number: '18',
     // TODO - make this generic.  How?  Hard
     name: 'Form actions, use:enhance, and goto',
     projectedRelease: 'March',
@@ -339,8 +348,8 @@ export const lessons: Lesson[] = [
     `,
   },
   {
-    id: '118',
-    number: '18',
+    id: '119',
+    number: '19',
     name: 'Caught Monster Page',
     projectedRelease: 'March',
     // demoSubdomain: '18-caught-monster-page',
@@ -352,8 +361,8 @@ export const lessons: Lesson[] = [
     `
   },
   {
-    id: '119',
-    number: '19',
+    id: '120',
+    number: '20',
     name: 'Renaming Monsters',
     projectedRelease: 'March',
     // demoSubdomain: '19-renaming-monsters',
@@ -363,8 +372,8 @@ export const lessons: Lesson[] = [
       <p>We'll add a form to our monster detail page, and use what we've learned so far to make it a smooth experience.</p>`
   },
   {
-    id: '120',
-    number: '20',
+    id: '121',
+    number: '21',
     name: 'Error Routes and other techniques',
     projectedRelease: 'March',
     // demoSubdomain: '20-error-routes',
@@ -376,8 +385,8 @@ export const lessons: Lesson[] = [
       <p>In the second, we'll handle an error that happens in the frontend code.</p>`
   },
   {
-    id: '121',
-    number: '21',
+    id: '122',
+    number: '22',
     name: 'Animating our monsters',
     projectedRelease: 'March',
     // demoSubdomain: '21-animating-monsters',
@@ -387,8 +396,8 @@ export const lessons: Lesson[] = [
     `
   },
   {
-    id: '122',
-    number: '22',
+    id: '123',
+    number: '23',
     name: 'Deploying our app',
     projectedRelease: 'March',
     // demoSubdomain: '22-deploying-our-app',
