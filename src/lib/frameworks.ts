@@ -11,7 +11,7 @@ export const frameworks: {[key in FrameworkName]: {icon: string, color: string}}
   },
   'Next 13': {
     icon: 'logos:nextjs-icon',
-    color: '#000000'
+    color: '#3238C0'
   },
   'Remix 1.10': {
     icon: 'logos:remix-icon',
