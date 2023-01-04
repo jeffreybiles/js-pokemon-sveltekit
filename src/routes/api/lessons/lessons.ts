@@ -131,8 +131,14 @@ export const lessons: Lesson[] = [
     number: '05',
     name: 'Styling our Pokedex',
     projectedRelease: 'January',
-    // demoSubdomain: '5-styling-our-pokedex',
-    implementations: [],
+    demoSubdomain: '05-styling-pokedex',
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        youtubeId: 'KS_Z4gzToXA',
+        githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/3f6dd97957d98c3968fc0a5a2f80569a30e4268b',
+      }
+    ],
     description: `<p>We'll take the raw data from the pokemon API and turn it into a page that's easier to look at and understand.</p>
     <p>There aren't any new framework concepts in this video, and my CSS is not expert-level, so if you want to speedrun this course you can skip to the next lesson and pick up context from there.</p>
     <p>However, it can still be useful to see the page being built.</p>
