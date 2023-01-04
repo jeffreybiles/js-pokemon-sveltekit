@@ -20,7 +20,8 @@ export const frameworks: {[key in FrameworkName]: {icon: string, color: string}}
 
 }
 
-export const frameworkArray = Object.keys(frameworks).map((name: FrameworkName) => {
+const frameworkKeys = Object.keys(frameworks) as FrameworkName[]
+export const frameworkArray = frameworkKeys.map((name: FrameworkName) => {
   return {
     name,
     ...frameworks[name]
