@@ -150,8 +150,14 @@ export const lessons: Lesson[] = [
     number: '06',
     name: 'Reactivity',
     projectedRelease: 'January',
-    // demoSubdomain: '7-reactivity',
-    implementations: [],
+    demoSubdomain: '06-reactivity',
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/d5d7ee66ee8aee81ef4e27b439d070257d47bb05',
+        youtubeId: '0YovA4Xz5ik',
+      }
+    ],
     description: `<p>Reactive data is a cornerstone of interactive web apps.  Without it, we'd be reloading pages or updating all the different parts of our app manually.</p>
     <p>In this video we'll go over the basics of Svelte's reactivity system, learn how to interact with html elements, and then use those skills to select a specific monster.</p>
     <p>We'll learn:</p>
