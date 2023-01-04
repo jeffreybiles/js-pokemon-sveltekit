@@ -25,6 +25,18 @@
   {/each}
 </div>
 
+<h1>Build a complete pokedex</h1>
+<p>You can filter pokemon by region and name, catch and release them, look at individualized stats for each caught pokemon.</p>
+<p>Play around with it in the iframe below.</p>
+<div class="iframe-container">
+  <iframe
+    src="https://complete.js-pokemon.com"
+    style="width:100%; height:700px; border:0; border-radius: 4px; overflow:hidden;"
+    title="pokedex-tutorial"
+    allow="geolocation; microphone; camera; midi; vr; accelerometer; gyroscope; payment; ambient-light-sensor; encrypted-media; usb"
+    sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
+  />
+</div>
 <MailingListForm />
 
 <style>
@@ -53,5 +65,10 @@
     font-weight: 200;
     font-size: 1.2rem;
     margin: 1rem 0;
+  }
+  .iframe-container {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    border-radius: 5px;
+    margin: 2rem 0;
   }
 </style>
