@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { frameworks } from "$lib/frameworks";
   import MailingListForm from "$lib/MailingListForm.svelte";
   import type { Lesson } from "src/routes/api/lessons/lessons";
   import type { PageData } from './$types';
@@ -25,7 +26,8 @@
     <div class="tabs">
       {#each lesson.implementations as implementation}
         <div
-          class="tab hoverable-button"
+          class="tab framework-tab"
+          style="--color: {frameworks[implementation.framework].color};"
           class:active={implementation.framework == selectedFramework}
           on:click={() => selectFramework(implementation.framework)}
           on:keypress={() => selectFramework(implementation.framework)}
@@ -101,10 +103,25 @@
     text-decoration: none;
     font-size: 20px;
   }
-
   .tab:first-of-type {
     border-left: black 1px solid;
   }
+  .framework-tab {
+    color: var(--color);
+    cursor: pointer;
+    border-right: 1px solid black;
+    border-bottom: none;
+
+  }
+  .framework-tab.active, .framework-tab:hover {
+    background-color: var(--color);
+    color: white;
+  }
+  .framework-tab:hover {
+    opacity: 0.8;
+  }
+
+
 
   @media (max-width: 1400px) {
     .tab {
