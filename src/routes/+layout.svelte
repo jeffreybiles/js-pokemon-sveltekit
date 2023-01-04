@@ -6,8 +6,11 @@ export let data: PageData;
 import LessonSidebar from './LessonSidebar.svelte';
 import Navbar from './Navbar.svelte';
 import Toast from '$lib/Toast.svelte';
-    import { browser } from '$app/environment';
-    import { webVitals } from '$lib/vitals';
+import { browser } from '$app/environment';
+import { webVitals } from '$lib/vitals';
+
+import { inject } from '@vercel/analytics';
+inject();
 
 let analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
 $: if (browser && analyticsId) {

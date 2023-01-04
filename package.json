@@ -21,6 +21,7 @@
 	"type": "module",
 	"dependencies": {
 		"@iconify/svelte": "^3.0.1",
+		"@vercel/analytics": "^0.1.6",
 		"@zerodevx/svelte-toast": "^1.0.0-rc.1",
 		"web-vitals": "^3.1.0"
 	}
