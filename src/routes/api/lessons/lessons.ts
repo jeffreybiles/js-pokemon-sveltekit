@@ -36,14 +36,14 @@ export const lessons: Lesson[] = [
         framework: 'Nuxt 3',
         youtubeId: '0W16DJeAsFM',
       },
-      { // note: this is not actually created yet, but I'm leaving it here as a placeholder
-        framework: 'Next 13',
-        youtubeId: 'ypY-HuJP95k',
-      },
-      { // note: this is not actually created yet, but I'm leaving it here as a placeholder
-        framework: 'Remix 1.10',
-        youtubeId: 'ypY-HuJP95k',
-      }
+      // { // note: this is not actually created yet, but I'm leaving it here as a placeholder
+      //   framework: 'Next 13',
+      //   youtubeId: 'ypY-HuJP95k',
+      // },
+      // { // note: this is not actually created yet, but I'm leaving it here as a placeholder
+      //   framework: 'Remix 1.10',
+      //   youtubeId: 'ypY-HuJP95k',
+      // }
     ]
   },
   {
@@ -71,16 +71,16 @@ export const lessons: Lesson[] = [
         githubUrl: '',
         youtubeId: '0W16DJeAsFM',
       },
-      { // note: this is not actually created yet, but I'm leaving it here as a placeholder
-        framework: 'Next 13',
-        githubUrl: '',
-        youtubeId: 'ypY-HuJP95k',
-      },
-      { // note: this is not actually created yet, but I'm leaving it here as a placeholder
-        framework: 'Remix 1.10',
-        githubUrl: '',
-        youtubeId: 'ypY-HuJP95k',
-      }
+      // { // note: this is not actually created yet, but I'm leaving it here as a placeholder
+      //   framework: 'Next 13',
+      //   githubUrl: '',
+      //   youtubeId: 'ypY-HuJP95k',
+      // },
+      // { // note: this is not actually created yet, but I'm leaving it here as a placeholder
+      //   framework: 'Remix 1.10',
+      //   githubUrl: '',
+      //   youtubeId: 'ypY-HuJP95k',
+      // }
     ]
   },
   {
