@@ -5,6 +5,7 @@ import { page } from '$app/stores';
 export let data: PageData;
 import LessonSidebar from './LessonSidebar.svelte';
 import Navbar from './Navbar.svelte';
+import Toast from '$lib/Toast.svelte';
 
 </script>
 
@@ -18,6 +19,8 @@ import Navbar from './Navbar.svelte';
     </div>
   </div>
 </div>
+
+<Toast />
 
 <style>
 /* resetting */

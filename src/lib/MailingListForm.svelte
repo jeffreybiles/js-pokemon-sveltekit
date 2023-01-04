@@ -1,6 +1,7 @@
 <script lang="ts">
   import { browser } from "$app/environment";
   import { tick } from "svelte";
+  import { toast } from '@zerodevx/svelte-toast'
 
   let email = "";
   let hidden = "";
@@ -22,9 +23,21 @@
     if (response.ok) {
       localStorage.setItem("email", email);
       previousEmail = email;
-      alert("Thanks for signing up!");
+      toast.push('Thanks for signing up!', {
+        theme: {
+          '--toastColor': "rgb(0, 100, 0)",
+          '--toastBackground': 'rgb(240, 255, 240)',
+          '--toastBarBackground': 'rgb(0, 200, 0)',
+        },
+      })
     } else {
-      alert("Something went wrong. Please try again.");
+      toast.push("Something went wrong. Please try again.", {
+        theme: {
+          '--toastColor': "rgb(100, 0, 0)",
+          '--toastBackground': 'rgb(255, 240, 240)',
+          '--toastBarBackground': 'rgb(200, 0, 0)',
+        },
+      })
     }
   };
   const newAddress = async () => {
