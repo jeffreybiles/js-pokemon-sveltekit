@@ -1,6 +1,7 @@
 <script lang="ts">
   import type { Lesson } from './api/lessons/lessons'
   import Iconify from '@iconify/svelte';
+  import { frameworks } from '$lib/frameworks';
 
   export let lessons: Lesson[] = []
   export let selectedLessonId: string = ''
@@ -13,13 +14,6 @@
     }
   };
   onMount(closeIfSmallScreen)
-
-  const frameworkIcons = {
-    'Next 13': 'logos:nextjs-icon',
-    'Remix 1.10': 'logos:remix-icon',
-    'Nuxt 3': 'vscode-icons:file-type-nuxt',
-    'SvelteKit 1.0': 'vscode-icons:file-type-svelte',
-  }
 </script>
 
 {#if !$sidebarOpen}
@@ -56,7 +50,7 @@
         {#if lesson.implementations.length > 0}
         <div class="lesson-implementations">
           {#each lesson.implementations as implementation}
-            <Iconify icon={frameworkIcons[implementation.framework]} />
+            <Iconify icon={frameworks[implementation.framework].icon} />
           {/each}
         </div>
         {:else}
