@@ -6,6 +6,17 @@ export let data: PageData;
 import LessonSidebar from './LessonSidebar.svelte';
 import Navbar from './Navbar.svelte';
 import Toast from '$lib/Toast.svelte';
+    import { browser } from '$app/environment';
+    import { webVitals } from '$lib/vitals';
+
+let analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
+$: if (browser && analyticsId) {
+  webVitals({
+    path: $page.url.pathname,
+    params: $page.params,
+    analyticsId
+  })
+}
 
 </script>
 
