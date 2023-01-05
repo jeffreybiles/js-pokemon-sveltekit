@@ -50,7 +50,9 @@
         {#if lesson.implementations.length > 0}
         <div class="lesson-implementations">
           {#each lesson.implementations as implementation}
-            <Iconify icon={frameworks[implementation.framework].icon} />
+            {#if implementation.lengthInSeconds}
+              <Iconify icon={frameworks[implementation.framework].icon} />
+            {/if}
           {/each}
         </div>
         {:else}

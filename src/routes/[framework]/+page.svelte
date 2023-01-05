@@ -8,6 +8,12 @@
 
   $: frameworkSlug = $page.params.framework;
   $: framework = frameworkArray.find((f) => f.slug === frameworkSlug);
+
+  const timeDisplay = (seconds: number) => {
+    const minutes = Math.floor(seconds / 60);
+    const secondsLeft = seconds % 60;
+    return `${minutes}:${secondsLeft < 10 ? "0" : ""}${secondsLeft}`;
+  };
 </script>
 
 
@@ -26,10 +32,23 @@
     {@const implementation = lesson.implementations.find((i) => i.framework === framework?.name)}
     <a
       href="/{frameworkSlug}/{lesson.id}"
-      class="lesson-link {implementation ? 'implemented' : 'not-implemented'}"
-      style="--color: {framework?.color}"
+      class="lesson-link {implementation?.lengthInSeconds ? 'implemented' : 'not-implemented'}"
+      style="
+        --color: {framework?.color};
+        --lightColor: {framework?.lightColor};
+        --darkColor: {framework?.darkColor};
+      "
     >
       {lesson.name}
+      {#if implementation?.lengthInSeconds}
+        <span class="length">
+          {timeDisplay(implementation.lengthInSeconds)}
+        </span>
+      {:else}
+        <span class="length">
+          {implementation?.releaseDate ?? 'Coming soon'}
+        </span>
+      {/if}
     </a>
   {/each}
 
@@ -41,16 +60,17 @@
 
 <style>
   .lesson-link {
-    display: block;
+    display: flex;
+    justify-content: space-between;
     padding: 8px;
-    border: 1px solid var(--color);
+    border: 1px solid var(--lightColor);
     border-radius: 4px;
     margin-bottom: 8px;
     text-decoration: none;
     color: #333;
   }
   .lesson-link:hover {
-    background-color: var(--color);
+    background-color: var(--darkColor);
     color: white;
   }
   .implemented {

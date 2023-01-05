@@ -10,6 +10,7 @@ export type ReleasedImplementation = Implementation & {
   youtubeId: string,
 }
 export type Implementation = {
+  lengthInSeconds?: number,
   releaseDate?: string,
   framework: FrameworkName,
   githubUrl?: string,
