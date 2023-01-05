@@ -1,15 +1,26 @@
 import type { FrameworkName } from "$lib/frameworks"
+
+// TODO - add data for the latter half of the series for other frameworks
+
+// Testing whether a video is 'present' should use lengthInSeconds, rather than existence of an implementation
+export type ReleasedImplementation = Implementation & {
+  lengthInSeconds: number,
+  releaseDate: string,
+  githubUrl: string,
+  youtubeId: string,
+}
 export type Implementation = {
+  releaseDate?: string,
   framework: FrameworkName,
   githubUrl?: string,
-  youtubeId: string,
+  youtubeId?: string,
 }
 export type Lesson = {
   id: string,
   number: string,
   name: string,
   demoSubdomain?: string, // only link if there's a demoSubdomain
-  implementations: Implementation[],
+  implementations: (Implementation | ReleasedImplementation)[],
   description?: string,
   projectedRelease?: string,
 }
@@ -29,21 +40,22 @@ export const lessons: Lesson[] = [
 `,
     implementations: [
       {
+        releaseDate: 'January 6, 2022',
         framework: 'SvelteKit 1.0',
         youtubeId: '_FJy4yUSmfc', // note: this is not actually the video for this lesson, this is a random video
       },
-      { // note: this is not actually created yet, but I'm leaving it here as a placeholder
+      {
         framework: 'Nuxt 3',
-        youtubeId: '0W16DJeAsFM',
+        releaseDate: 'February 1, 2022',
       },
-      // { // note: this is not actually created yet, but I'm leaving it here as a placeholder
-      //   framework: 'Next 13',
-      //   youtubeId: 'ypY-HuJP95k',
-      // },
-      // { // note: this is not actually created yet, but I'm leaving it here as a placeholder
-      //   framework: 'Remix 1.10',
-      //   youtubeId: 'ypY-HuJP95k',
-      // }
+      {
+        framework: 'Next 13',
+        releaseDate: 'March 1, 2022',
+      },
+      {
+        framework: 'Remix 1.10',
+        releaseDate: 'April 1, 2022',
+      }
     ]
   },
   {
@@ -63,24 +75,23 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
+        releaseDate: 'January 6, 2022',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/2b834f9b789e591a66de81d767be4ed089b88157',
         youtubeId: 'VG7U1ESkbdE',
+        lengthInSeconds: 300,
       },
-      { // note: this is not actually created yet, but I'm leaving it here as a placeholder
+      {
         framework: 'Nuxt 3',
-        githubUrl: '',
-        youtubeId: '0W16DJeAsFM',
+        releaseDate: 'February 2, 2022',
       },
-      // { // note: this is not actually created yet, but I'm leaving it here as a placeholder
-      //   framework: 'Next 13',
-      //   githubUrl: '',
-      //   youtubeId: 'ypY-HuJP95k',
-      // },
-      // { // note: this is not actually created yet, but I'm leaving it here as a placeholder
-      //   framework: 'Remix 1.10',
-      //   githubUrl: '',
-      //   youtubeId: 'ypY-HuJP95k',
-      // }
+      {
+        framework: 'Next 13',
+        releaseDate: 'March 2, 2022',
+      },
+      {
+        framework: 'Remix 1.10',
+        releaseDate: 'April 2, 2022',
+      },
     ]
   },
   {
@@ -101,9 +112,23 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
+        releaseDate: 'January 6, 2022',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/4e1239dd40be8057a807d34a489ab0f81a76035e',
         youtubeId: 'i2F1YcjALfo',
-      }
+        lengthInSeconds: 386,
+      },
+      {
+        framework: 'Nuxt 3',
+        releaseDate: 'February 3, 2022',
+      },
+      {
+        framework: 'Next 13',
+        releaseDate: 'March 3, 2022',
+      },
+      {
+        framework: 'Remix 1.10',
+        releaseDate: 'April 3, 2022',
+      },
     ],
   },
   {
@@ -122,9 +147,23 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
+        releaseDate: 'January 6, 2022',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/0b2408df3606070e4b9d28a3f30a88f371b32b0c',
         youtubeId: 'n1oyh99Bwlg',
-      }
+        lengthInSeconds: 738,
+      },
+      {
+        framework: 'Nuxt 3',
+        releaseDate: 'February 4, 2022',
+      },
+      {
+        framework: 'Next 13',
+        releaseDate: 'March 4, 2022',
+      },
+      {
+        framework: 'Remix 1.10',
+        releaseDate: 'April 4, 2022',
+      },
     ],
   },
   {
@@ -136,9 +175,23 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
+        releaseDate: 'January 6, 2022',
         youtubeId: 'KS_Z4gzToXA',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/3f6dd97957d98c3968fc0a5a2f80569a30e4268b',
-      }
+        lengthInSeconds: 633,
+      },
+      {
+        framework: 'Nuxt 3',
+        releaseDate: 'February 5, 2022',
+      },
+      {
+        framework: 'Next 13',
+        releaseDate: 'March 5, 2022',
+      },
+      {
+        framework: 'Remix 1.10',
+        releaseDate: 'April 5, 2022',
+      },
     ],
     description: `<p>We'll take the raw data from the pokemon API and turn it into a page that's easier to look at and understand.</p>
     <p>There aren't any new framework concepts in this video, and my CSS is not expert-level, so if you want to speedrun this course you can skip to the next lesson and pick up context from there.</p>
@@ -154,9 +207,24 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
+        releaseDate: 'January 6, 2022',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/d5d7ee66ee8aee81ef4e27b439d070257d47bb05',
         youtubeId: '0YovA4Xz5ik',
-      }
+        lengthInSeconds: 491,
+      },
+      {
+        framework: 'Nuxt 3',
+        releaseDate: 'February 6, 2022',
+      },
+      {
+        framework: 'Next 13',
+        releaseDate: 'March 6, 2022',
+      },
+      {
+        framework: 'Remix 1.10',
+        releaseDate: 'April 6, 2022',
+      },
+
     ],
     description: `<p>Reactive data is a cornerstone of interactive web apps.  Without it, we'd be reloading pages or updating all the different parts of our app manually.</p>
     <p>In this video we'll go over the basics of Svelte's reactivity system, learn how to interact with html elements, and then use those skills to select a specific monster.</p>
@@ -174,7 +242,24 @@ export const lessons: Lesson[] = [
     name: 'Links and Query Params',
     projectedRelease: 'January',
     // demoSubdomain: '6-links-query-params',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 8, 2022',
+      },
+      {
+        framework: 'Nuxt 3',
+        releaseDate: 'February 7, 2022',
+      },
+      {
+        framework: 'Next 13',
+        releaseDate: 'March 7, 2022',
+      },
+      {
+        framework: 'Remix 1.10',
+        releaseDate: 'April 7, 2022',
+      }
+    ],
     description: `
       <p>We want to save which pokemon is highlighted, and be able to share it with others.</p>
       <p>To build this feature, we'll learn how to use links and query params.</p>
@@ -187,7 +272,24 @@ export const lessons: Lesson[] = [
     name: 'Reusable Components',
     projectedRelease: 'January',
     // demoSubdomain: '8-reusable-components',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 9, 2022',
+      },
+      {
+        framework: 'Nuxt 3',
+        releaseDate: 'February 8, 2022',
+      },
+      {
+        framework: 'Next 13',
+        releaseDate: 'March 8, 2022',
+      },
+      {
+        framework: 'Remix 1.10',
+        releaseDate: 'April 8, 2022',
+      }
+    ],
     description: `
       <p>We want to display our selected monster better, so we could either copy/paste everything... or we could make a reusable component.</p>
       <p>We'll learn:</p>
@@ -203,7 +305,24 @@ export const lessons: Lesson[] = [
     number: '09',
     name: 'Loading pokemon by generation',
     projectedRelease: 'January',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 10, 2022',
+      },
+      {
+        framework: 'Nuxt 3',
+        releaseDate: 'February 9, 2022',
+      },
+      {
+        framework: 'Next 13',
+        releaseDate: 'March 9, 2022',
+      },
+      {
+        framework: 'Remix 1.10',
+        releaseDate: 'April 9, 2022',
+      }
+    ],
     description: `<p>Load pokemon data for a specific generation, or for all generations.</p>
     <p>To build this feature, we'll combine our knowledge of links and query params, reactivity, and the load function.</p>
     `,
@@ -214,7 +333,24 @@ export const lessons: Lesson[] = [
     name: 'Search Form',
     projectedRelease: 'January',
     // demoSubdomain: '9-search-form',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 11, 2022',
+      },
+      {
+        framework: 'Nuxt 3',
+        releaseDate: 'February 10, 2022',
+      },
+      {
+        framework: 'Next 13',
+        releaseDate: 'March 10, 2022',
+      },
+      {
+        framework: 'Remix 1.10',
+        releaseDate: 'April 10, 2022',
+      }
+    ],
     description: `
       <p>We'll add a search form to our app, and use it to filter the list of monsters.</p>
       <p>We'll learn:</p>
@@ -230,7 +366,12 @@ export const lessons: Lesson[] = [
     name: 'Filesystem-Based Router',
     projectedRelease: 'February',
     // demoSubdomain: '10-filesystem-based-router',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 12, 2022',
+      }
+    ],
     description: `
       <p>We want to add new pages to our app - an 'about' page explaining the app, and a 'my-pokemon' page showing your caught monsters.
       <p>We'll learn:</p>
@@ -246,7 +387,12 @@ export const lessons: Lesson[] = [
     name: 'Layouts, Nested Routes, and "breaking out" of Layouts',
     projectedRelease: 'February',
     // demoSubdomain: '11-layouts-nested-routes',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 13, 2022',
+      }
+    ],
     description:`
       <p>We want to add a navbar to our app, to make it easier to navigate between pages.</p>
       <p>We'll learn:</p>
@@ -263,7 +409,12 @@ export const lessons: Lesson[] = [
     name: 'Sharing data across the app',
     projectedRelease: 'February',
     // demoSubdomain: '12-stores-writable-derived',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 15, 2022',
+      }
+    ],
     // TODO: may need to make implementation-specific descriptions?  Start with regular description, then do implementation-specific?
     description: `
       <p>We want to fill out the 'my-pokemon' page in our app, to show the monsters we've caught.</p>
@@ -277,7 +428,12 @@ export const lessons: Lesson[] = [
     name: 'Dynamic Routes',
     projectedRelease: 'February',
     // demoSubdomain: '13-dynamic-routes',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 16, 2022',
+      }
+    ],
     description: `
       <p>We want to add a page to our app that shows the details of a specific monster.</p>
       <p>However, we can't add a new route for every monster - instead, we'll add one route that can handle any monster.</p>
@@ -295,7 +451,12 @@ export const lessons: Lesson[] = [
     name: 'Displaying Species Stats',
     projectedRelease: 'February',
     // demoSubdomain: '14-displaying-species-stats',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 17, 2022',
+      }
+    ],
     description: `
       <p>Which pokemon is strongest?</p>
       <p>We're going to add a chart that shows the stats for each species of monster</p>
@@ -309,7 +470,12 @@ export const lessons: Lesson[] = [
     name: 'Persisting Data with LocalStorage',
     projectedRelease: 'February',
     // demoSubdomain: '15-persisting-data-with-localstorage',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 18, 2022',
+      }
+    ],
     description: `
       <p>We want to persist the data about which monsters we've caught, so that it's still there when we reload the page.</p>
       <p>We'll use localStorage to do this.  In a production app we'd typically use a server, but I want this tutorial to be as easy to follow as possible, and opening up a publicly-usable API means we'd need to cover authentication, which would greatly increase the size of this tutorial.</p>
@@ -327,7 +493,12 @@ export const lessons: Lesson[] = [
     name: 'Individualizing Monsters',
     projectedRelease: 'March',
     // demoSubdomain: '16-individualizing-monsters',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 19, 2022',
+      }
+    ],
     description: `
       <p>We want to be able to tell apart our monsters, and choose which ones to release - instead of just releasing a random one of a certain species.</p>
       <p>To do this, we'll change the way we're tracking monsters - we'll keep an array of monsters and connect them to the species with species_id.  We'll also add a random name and random ID.</p>
@@ -347,7 +518,12 @@ export const lessons: Lesson[] = [
     name: 'Form actions, use:enhance, and goto',
     projectedRelease: 'March',
     // demoSubdomain: '17-form-actions-use-enhance-goto',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 20, 2022',
+      }
+    ],
     description: `
       <p>SvelteKit wants us to use forms in the 'classic' way, like we did before SPAs became popular</p>
       <p>However, we want to use forms in the 'modern' way, where we can submit the form and have the page update without a full page reload.</p>
@@ -360,7 +536,12 @@ export const lessons: Lesson[] = [
     name: 'Caught Monster Page',
     projectedRelease: 'March',
     // demoSubdomain: '18-caught-monster-page',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 22, 2022',
+      }
+    ],
     description: `
       <p>We want to add a page to our app that shows the details of a specific caught monster.</p>
       <p>We'll create a new nested route with the monster ID, and then use the Stats component to display the monster's stats.</p>
@@ -373,7 +554,12 @@ export const lessons: Lesson[] = [
     name: 'Renaming Monsters',
     projectedRelease: 'March',
     // demoSubdomain: '19-renaming-monsters',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 23, 2022',
+      }
+    ],
     description: `
       <p>We want to be able to rename our monsters.</p>
       <p>We'll add a form to our monster detail page, and use what we've learned so far to make it a smooth experience.</p>`
@@ -384,7 +570,12 @@ export const lessons: Lesson[] = [
     name: 'Error Routes and other techniques',
     projectedRelease: 'March',
     // demoSubdomain: '20-error-routes',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 24, 2022',
+      }
+    ],
     description: `
       <p>What happens when things go wrong?</p>
       <p>We'll show two ways to handle errors:</p>
@@ -397,7 +588,12 @@ export const lessons: Lesson[] = [
     name: 'Animating our monsters',
     projectedRelease: 'March',
     // demoSubdomain: '21-animating-monsters',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 25, 2022',
+      }
+    ],
     description: `
       <p>Let's add some animations to our app!</p>
     `
@@ -408,7 +604,12 @@ export const lessons: Lesson[] = [
     name: 'Deploying our app',
     projectedRelease: 'March',
     // demoSubdomain: '22-deploying-our-app',
-    implementations: [],
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        releaseDate: 'January 26, 2022',
+      }
+    ],
     description: `
       <p>Now that we've built our app, let's deploy it!</p>
       <p>We'll use Vercel to deploy our app, although there are lots of other fantastic hosting providers out there.</p>
