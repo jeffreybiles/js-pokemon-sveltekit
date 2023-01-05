@@ -1,6 +1,7 @@
 <script lang="ts">
   import { frameworks } from "$lib/frameworks";
   import MailingListForm from "$lib/MailingListForm.svelte";
+    import VideoPlayer from "$lib/VideoPlayer.svelte";
   import type { Lesson } from "src/routes/api/lessons/lessons";
   import type { PageData } from './$types';
   import Navigation from "./Navigation.svelte";
@@ -43,17 +44,9 @@
       <a class="tab hoverable-button" href="https://www.youtube.com/watch?v={selectedImplementation?.youtubeId}">Watch on YouTube</a>
     </div>
   </div>
-  <div class="video">
-    <iframe
-      width="100%"
-      height="100%"
-      src="https://www.youtube.com/embed/{selectedImplementation?.youtubeId}"
-      title="YouTube video player"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen
-    ></iframe>
-  </div>
+  {#if selectedImplementation && selectedImplementation.youtubeId}
+    <VideoPlayer youtubeId={selectedImplementation.youtubeId} />
+  {/if}
 {:else}
   <div class="tab">
     Coming soon!  Projected release date: {lesson.projectedRelease}
@@ -145,12 +138,6 @@
       display: flex;
       justify-content: center;
     }
-  }
-
-
-  .video {
-    width: 100%;
-    aspect-ratio: 16 / 9;
   }
 
 </style>
