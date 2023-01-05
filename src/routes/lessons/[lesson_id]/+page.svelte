@@ -4,7 +4,7 @@
     import VideoPlayer from "$lib/VideoPlayer.svelte";
   import type { Lesson } from "src/routes/api/lessons/lessons";
   import type { PageData } from './$types';
-  import Navigation from "./Navigation.svelte";
+  import Navigation from "$lib/Navigation.svelte";
   export let data: PageData;
   
   $: lesson = data.lesson as Lesson;
@@ -54,6 +54,7 @@
 {/if}
 
 <Navigation
+  baseFolder='lessons'
   lesson={lesson}
   previousLesson={previousLesson}
   nextLesson={nextLesson}

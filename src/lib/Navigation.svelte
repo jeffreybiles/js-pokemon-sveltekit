@@ -3,6 +3,7 @@
 
   import type { Lesson } from "src/routes/api/lessons/lessons";
 
+  export let baseFolder: string;
   export let lesson: Lesson;
   export let previousLesson: Lesson;
   export let nextLesson: Lesson;
@@ -11,7 +12,7 @@
 <div class="navigation-buttons">
   <div class="previous-button">
     {#if previousLesson}
-      <a class="button hoverable-button" href="/lessons/{previousLesson.id}">
+      <a class="button hoverable-button" href="/{baseFolder}/{previousLesson.id}">
         <Icon icon="carbon:arrow-left" />
         Previous
       </a>
@@ -40,7 +41,7 @@
 
   <div class="next-button">
     {#if nextLesson}
-      <a class="button hoverable-button" href="/lessons/{nextLesson.id}">
+      <a class="button hoverable-button" href="/{baseFolder}/{nextLesson.id}">
         Next
         <Icon icon="carbon:arrow-right" />
       </a>
