@@ -34,9 +34,9 @@
   {#if implementation?.youtubeId}
     <VideoPlayer youtubeId={implementation.youtubeId} />
   {:else if implementation}
-    This video will be released on {implementation?.releaseDate}
+   <p>This video will be released on {implementation?.releaseDate}</p>
   {:else}
-    This video is coming soon!
+    <p>This video is coming soon!</p>
   {/if}
   <Navigation
     baseFolder={frameworkSlug}
@@ -59,5 +59,8 @@
   }
   a {
     color: black;
+  }
+  p, .description :global(p), .description :global(li) {
+    font-size: 18px;
   }
 </style>
