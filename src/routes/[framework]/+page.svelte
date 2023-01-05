@@ -16,18 +16,16 @@
   };
 </script>
 
-
+<div class="framework-page">
 {#if framework}
   <h1>
     <Icon icon={framework.icon} />
     {framework.name}
   </h1>
 
-  <!-- Expand upon this as I add more info to the implementation:
-    * expected release date
-    * length
-    * completion status (saved to localstorage)
-   -->
+  <!-- TODO - add customized description and/or styling - part of 'make frontpage beautiful' -->
+
+  <!-- TODO - Add completion status (saved to localstorage) to the row.  Probably to the left of the title in a small box. -->
   {#each data.lessons as lesson (lesson.id)}
     {@const implementation = lesson.implementations.find((i) => i.framework === framework?.name)}
     <a
@@ -57,8 +55,12 @@
 {#if !framework}
   <h1>Framework '{frameworkSlug}' not found</h1>
 {/if}
-
+</div>
 <style>
+  .framework-page {
+    max-width: 800px;
+    margin: 0 auto;
+  }
   .lesson-link {
     display: flex;
     justify-content: space-between;

@@ -2,8 +2,8 @@ export type FrameworkName = 'SvelteKit 1.0' | 'Nuxt 3' | 'Next 13' | 'Remix 1.10
 type FrameworkProperties = {
   icon: string
   color: string
-  lightColor?: string
-  darkColor?: string
+  lightColor: string
+  darkColor: string
   slug: string
 }
 type Framework = FrameworkProperties & {
