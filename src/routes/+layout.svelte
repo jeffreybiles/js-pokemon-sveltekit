@@ -29,6 +29,7 @@ $: if (browser && analyticsId) {
     <Navbar
       frameworkSlug={$page.params.framework}
       lessonId={$page.params.lesson_id}
+      lessons={data.lessons}
     />
 
     <div class="main-content">

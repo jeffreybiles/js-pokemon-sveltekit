@@ -2,7 +2,8 @@
   import { sidebarOpen } from '../stores';
   import Iconify from '@iconify/svelte';
   import { frameworkArray } from '$lib/frameworks';
-    import { goto } from '$app/navigation';
+  import { goto } from '$app/navigation';
+  import type { Implementation, Lesson } from './api/lessons/lessons';
   
   const changeFramework = (e: any) => {
     const frameworkSlug = e.target.value;
@@ -13,8 +14,11 @@
     }
   }
 
+  export let lessons: Lesson[] = [];
   export let lessonId: string = '';
   export let frameworkSlug: string = 'lessons';
+
+  $: implementations = lessons.find(lesson => lesson.id === lessonId)?.implementations || [] as Implementation[];
 </script>
 
 <div class="navbar">
@@ -31,7 +35,16 @@
     <select on:change={changeFramework} bind:value={frameworkSlug}>
       <option value="lessons"></option>
       {#each frameworkArray as framework}
-        <option value={framework.slug}>{framework.name}</option>
+        {@const implementation = implementations.find((i) => i.framework == framework.name)}
+        {@const unreleased = !implementation?.lengthInSeconds}
+        <!-- So it turns out that the select box is not stylable -->
+        <!-- So we're going to use svelte-select instead -->
+        <option value={framework.slug} class:unreleased>
+          {framework.name}
+          {#if unreleased}
+            <small>({implementation?.releaseDate ?? 'Coming soon'})</small>
+          {/if}
+        </option>
       {/each}
     </select>
   </div>
