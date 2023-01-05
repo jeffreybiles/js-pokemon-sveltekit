@@ -1,6 +1,20 @@
-<script>
+<script lang="ts">
   import { sidebarOpen } from '../stores';
   import Iconify from '@iconify/svelte';
+  import { frameworkArray } from '$lib/frameworks';
+    import { goto } from '$app/navigation';
+  
+  const changeFramework = (e: any) => {
+    const frameworkSlug = e.target.value;
+    if(!lessonId) {
+      goto(`/${frameworkSlug}`);
+    } else {
+      goto(`/${frameworkSlug}/${lessonId}`);
+    }
+  }
+
+  export let lessonId: string = '';
+  export let frameworkSlug: string = 'lessons';
 </script>
 
 <div class="navbar">
@@ -12,9 +26,17 @@
     <Iconify icon="mdi:menu" />
     <div class="text">Menu</div>
   </div>
-  <a href="/" class="logo">JS Pokemon Tutorial</a>
+  <div>
+    <a href="/" class="logo">JS Pokemon Tutorial</a>, in
+    <select on:change={changeFramework} bind:value={frameworkSlug}>
+      <option value="lessons"></option>
+      {#each frameworkArray as framework}
+        <option value={framework.slug}>{framework.name}</option>
+      {/each}
+    </select>
+  </div>
   <div class="links">
-    <!-- TODO - put links in here -->
+    <a href="https://www.jeffreybiles.com/consulting/">Hire Jeffrey</a>
   </div>
 </div>
 

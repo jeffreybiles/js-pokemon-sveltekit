@@ -26,7 +26,10 @@ $: if (browser && analyticsId) {
 <div class="container">
   <LessonSidebar lessons={data.lessons} selectedLessonId={$page.params.lesson_id} />
   <div class="main-content-container">
-    <Navbar />
+    <Navbar
+      frameworkSlug={$page.params.framework}
+      lessonId={$page.params.lesson_id}
+    />
 
     <div class="main-content">
       <slot />
