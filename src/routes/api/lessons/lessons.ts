@@ -83,15 +83,15 @@ export const lessons: Lesson[] = [
       },
       {
         framework: 'Nuxt 3',
-        releaseDate: 'February 2, 2022',
+        // releaseDate: 'February 2, 2022',
       },
       {
         framework: 'Next 13',
-        releaseDate: 'March 2, 2022',
+        // releaseDate: 'March 2, 2022',
       },
       {
         framework: 'Remix 1.10',
-        releaseDate: 'April 2, 2022',
+        // releaseDate: 'April 2, 2022',
       },
     ]
   },
@@ -120,15 +120,15 @@ export const lessons: Lesson[] = [
       },
       {
         framework: 'Nuxt 3',
-        releaseDate: 'February 3, 2022',
+        // releaseDate: 'February 3, 2022',
       },
       {
         framework: 'Next 13',
-        releaseDate: 'March 3, 2022',
+        // releaseDate: 'March 3, 2022',
       },
       {
         framework: 'Remix 1.10',
-        releaseDate: 'April 3, 2022',
+        // releaseDate: 'April 3, 2022',
       },
     ],
   },
@@ -155,15 +155,15 @@ export const lessons: Lesson[] = [
       },
       {
         framework: 'Nuxt 3',
-        releaseDate: 'February 4, 2022',
+        // releaseDate: 'February 4, 2022',
       },
       {
         framework: 'Next 13',
-        releaseDate: 'March 4, 2022',
+        // releaseDate: 'March 4, 2022',
       },
       {
         framework: 'Remix 1.10',
-        releaseDate: 'April 4, 2022',
+        // releaseDate: 'April 4, 2022',
       },
     ],
   },
@@ -183,15 +183,15 @@ export const lessons: Lesson[] = [
       },
       {
         framework: 'Nuxt 3',
-        releaseDate: 'February 5, 2022',
+        // releaseDate: 'February 5, 2022',
       },
       {
         framework: 'Next 13',
-        releaseDate: 'March 5, 2022',
+        // releaseDate: 'March 5, 2022',
       },
       {
         framework: 'Remix 1.10',
-        releaseDate: 'April 5, 2022',
+        // releaseDate: 'April 5, 2022',
       },
     ],
     description: `<p>We'll take the raw data from the pokemon API and turn it into a page that's easier to look at and understand.</p>
@@ -215,15 +215,15 @@ export const lessons: Lesson[] = [
       },
       {
         framework: 'Nuxt 3',
-        releaseDate: 'February 6, 2022',
+        // releaseDate: 'February 6, 2022',
       },
       {
         framework: 'Next 13',
-        releaseDate: 'March 6, 2022',
+        // releaseDate: 'March 6, 2022',
       },
       {
         framework: 'Remix 1.10',
-        releaseDate: 'April 6, 2022',
+        // releaseDate: 'April 6, 2022',
       },
 
     ],
@@ -250,15 +250,15 @@ export const lessons: Lesson[] = [
       },
       {
         framework: 'Nuxt 3',
-        releaseDate: 'February 7, 2022',
+        // releaseDate: 'February 7, 2022',
       },
       {
         framework: 'Next 13',
-        releaseDate: 'March 7, 2022',
+        // releaseDate: 'March 7, 2022',
       },
       {
         framework: 'Remix 1.10',
-        releaseDate: 'April 7, 2022',
+        // releaseDate: 'April 7, 2022',
       }
     ],
     description: `
@@ -280,15 +280,15 @@ export const lessons: Lesson[] = [
       },
       {
         framework: 'Nuxt 3',
-        releaseDate: 'February 8, 2022',
+        // releaseDate: 'February 8, 2022',
       },
       {
         framework: 'Next 13',
-        releaseDate: 'March 8, 2022',
+        // releaseDate: 'March 8, 2022',
       },
       {
         framework: 'Remix 1.10',
-        releaseDate: 'April 8, 2022',
+        // releaseDate: 'April 8, 2022',
       }
     ],
     description: `
@@ -313,15 +313,15 @@ export const lessons: Lesson[] = [
       },
       {
         framework: 'Nuxt 3',
-        releaseDate: 'February 9, 2022',
+        // releaseDate: 'February 9, 2022',
       },
       {
         framework: 'Next 13',
-        releaseDate: 'March 9, 2022',
+        // releaseDate: 'March 9, 2022',
       },
       {
         framework: 'Remix 1.10',
-        releaseDate: 'April 9, 2022',
+        // releaseDate: 'April 9, 2022',
       }
     ],
     description: `<p>Load pokemon data for a specific generation, or for all generations.</p>
@@ -341,15 +341,15 @@ export const lessons: Lesson[] = [
       },
       {
         framework: 'Nuxt 3',
-        releaseDate: 'February 10, 2022',
+        // releaseDate: 'February 10, 2022',
       },
       {
         framework: 'Next 13',
-        releaseDate: 'March 10, 2022',
+        // releaseDate: 'March 10, 2022',
       },
       {
         framework: 'Remix 1.10',
-        releaseDate: 'April 10, 2022',
+        // releaseDate: 'April 10, 2022',
       }
     ],
     description: `
