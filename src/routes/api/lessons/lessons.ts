@@ -42,7 +42,8 @@ export const lessons: Lesson[] = [
       {
         // releaseDate: 'Jan 6',
         framework: 'SvelteKit 1.0',
-        youtubeId: '_FJy4yUSmfc', // note: this is not actually the video for this lesson, this is a random video
+        youtubeId: 'FP4AylVsiT8',
+        lengthInSeconds: 407,
       },
       {
         framework: 'Nuxt 3',
