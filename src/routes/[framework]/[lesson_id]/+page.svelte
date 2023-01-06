@@ -33,10 +33,10 @@
 
   {#if implementation?.youtubeId}
     <VideoPlayer youtubeId={implementation.youtubeId} />
-  {:else if implementation}
-   <p>This video will be released on {implementation?.releaseDate}</p>
+  {:else if implementation?.releaseDate}
+   <p>This video has an estimated release date of {implementation?.releaseDate}</p>
   {:else}
-    <p>This video is coming soon!</p>
+    <p>This video is not yet created for {implementation.framework}</p>
   {/if}
   <Navigation
     baseFolder={frameworkSlug}

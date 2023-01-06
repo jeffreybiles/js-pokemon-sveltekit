@@ -41,8 +41,8 @@
         <!-- So we're going to use svelte-select instead -->
         <option value={framework.slug} class:unreleased>
           {framework.name}
-          {#if unreleased}
-            <small>({implementation?.releaseDate ?? 'Coming soon'})</small>
+          {#if unreleased && lessonId}
+            <small>({implementation?.releaseDate?.split(',')[0] ?? 'soon...'})</small>
           {/if}
         </option>
       {/each}
