@@ -13,10 +13,9 @@
   };
 </script>
 <h1>Welcome to the Pokedex Tutorial</h1>
-<p>This video tutorial series will build the same app in 4 different Javascript meta-frameworks - Next 13, Remix 1.10, Nuxt 3, and SvelteKit 1.0</p>
+<p>This video tutorial series will build the same app in multiple Javascript meta-frameworks.</p>
 <p>Source code and demo site are available for each lesson.</p>
-<p class="status-report">Status: SvelteKit series is in production!</p>
-<p class="status-report">The next series will start in February.</p>
+<p>SvelteKit series is in production, and the second series will start in February.</p>
 
 <div class="framework-buttons">
   {#each frameworkArray as framework (framework.name)}
