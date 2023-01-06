@@ -54,7 +54,7 @@
     <!-- svelte-ignore a11y-invalid-attribute -->
     <a href="#" on:click={newAddress}>Sign up with a different address?</a>
   {:else}
-    <h2 class="title">Weekly videos in your inbox</h2>
+    <h2 class="title">Videos in your inbox</h2>
     <p>Get notified when new lessons are released, and when Jeffrey's creating other cool projects.</p>
     <form on:submit|preventDefault={submit}>
       <label for="email">Email</label>
