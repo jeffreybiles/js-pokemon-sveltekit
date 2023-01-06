@@ -6,7 +6,8 @@
 
   export let lessons: Lesson[] = []
   export let selectedLessonId: string = ''
-  export let selectedFramework: string;
+  // NOTE - this needs to be blank by default, when we switch back to having multiple frameworks
+  export let selectedFramework: string = 'sveltekit-1'; 
   import { sidebarOpen } from '../stores';
   import { onMount } from 'svelte';
   $: selectedFrameworkName = frameworkArray.find(framework => framework.slug === selectedFramework)?.name;
@@ -36,17 +37,19 @@
     >
       <Iconify icon="material-symbols:keyboard-double-arrow-left" />
     </div>
-    <a class="lesson hoverable-button" class:active={!selectedLessonId} href="/{selectedFramework ?? ''}">
+    <!-- this href will need to use {selectedFramework ?? ''} again if I switch back to doing multiple frameworks  -->
+    <a class="lesson hoverable-button" class:active={!selectedLessonId} href="/">
       <div class="lesson-number"></div>
       <div class="lesson-title">Home</div>
     </a>
 
     {#each lessons as lesson}
       {@const implementation = lesson.implementations.find(implementation => implementation.framework === selectedFrameworkName)}
+      <!-- this href will need to use {selectedFramework ?? 'lessons'} again if I switch back to doing multiple frameworks  -->
       <a
         class="lesson hoverable-button"
         class:active={lesson.id == selectedLessonId}
-        href="/{selectedFramework ?? 'lessons'}/{lesson.id}"
+        href="/lessons/{lesson.id}"
         on:click={closeIfSmallScreen}
       >
         <div class="lesson-number">{lesson.number}</div>

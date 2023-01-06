@@ -1,7 +1,7 @@
 <script lang="ts">
   import MailingListForm from "$lib/MailingListForm.svelte";
   import Iconify from "@iconify/svelte";
-  import { frameworkArray, type FrameworkName } from "$lib/frameworks";
+  import type { FrameworkName } from "$lib/frameworks";
   import { goto } from "$app/navigation";
   import type { PageData } from "./$types";
   export let data: PageData;
@@ -12,12 +12,14 @@
     }).length;
   };
 </script>
-<h1>Welcome to the Pokedex Tutorial</h1>
-<p>This video tutorial series will build the same app in multiple Javascript meta-frameworks.</p>
+<h1>Learn SvelteKit 1.0.  No Svelte experience required.</h1>
+<p>Build a pokedex from scratch in SvelteKit 1.0 and Svelte 3.</p>
+<!-- <p>This video tutorial series will build the same app in multiple Javascript meta-frameworks.</p> -->
 <p>Source code and demo site are available for each lesson.</p>
-<p>SvelteKit series is in production, and the second series will start in February.</p>
+<p>If this goes well, I may create tutorials in other meta-frameworks (Nuxt 3, Remix 1.10, Next 13, etc.).</p>
+<!-- <p>SvelteKit series is in production, and the second series will start in February.</p> -->
 
-<div class="framework-buttons">
+<!-- <div class="framework-buttons">
   {#each frameworkArray as framework (framework.name)}
     <a
       class="framework-button"
@@ -29,7 +31,7 @@
       <Iconify icon={framework.icon} />
     </a>
   {/each}
-</div>
+</div> -->
 
 <h1>Build a complete pokedex</h1>
 <p>You can filter pokemon by region and name, catch and release them, look at individualized stats for each caught pokemon.</p>
@@ -43,6 +45,9 @@
     sandbox="allow-modals allow-forms allow-popups allow-scripts allow-same-origin"
   />
 </div>
+
+<p>Sound good?</p>
+<a href='/lessons/101' class="framework-button start-button">Start Learning</a>
 <MailingListForm />
 
 <style>
@@ -63,6 +68,11 @@
     cursor: pointer;
     gap: 1rem;
     text-decoration: none;
+  }
+  .start-button {
+    background-color: #FF3E00;
+    margin-bottom: 16px;
+    max-width: 700px;
   }
   .framework-button.disabled {
     opacity: 0.3;

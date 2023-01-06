@@ -35,7 +35,8 @@
     <div class="text">Menu</div>
   </div>
   <div>
-    <a href="/" class="logo">JS Pokemon Tutorial</a>, in
+    <a href="/" class="logo">JS Pokemon Tutorial</a>
+    <!-- , in
     <select on:change={changeFramework} bind:value={frameworkSlug}>
       <option value="lessons"></option>
       {#each frameworkArray as framework}
@@ -48,7 +49,7 @@
           {/if}
         </option>
       {/each}
-    </select>
+    </select> -->
   </div>
   <div class="links">
     <a href="https://www.jeffreybiles.com/consulting/">Hire Jeffrey</a>

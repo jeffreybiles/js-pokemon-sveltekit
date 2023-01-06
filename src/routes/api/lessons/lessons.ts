@@ -34,10 +34,9 @@ export const lessons: Lesson[] = [
     number: '01',
     name: 'Choosing a Javascript Framework',
     demoSubdomain: 'complete',
-    description: `<p>This series will build the same app in 4 different Javascript meta-frameworks - Next 13, Remix 1.10, Nuxt 3, and SvelteKit 1.0</p>
-    <p>You can choose to follow only one framework, or watch multiple versions to see how they're similar and different.  If you're not sure which framework you prefer, then definitely watch all the versions of at least this first video.</p>
-    <p>For this series, I recommend that you already know basic html/css/javascript.  It's also helpful to have some experience with a framework like React, Vue, or Svelte (or Angular or Ember), but not required.</p>
-    <p>The demo you see behind you is the completed app.  We'll be using the SvelteKit version of the app for our demos, but they should all act the same as far as the user is concerned.</p>
+    description: `<p>There are many great Javascript meta-frameworks out there, but you can only build your app in one.</p>
+    <p>In this video we'll go over the pros and cons of each framework, and why I chose SvelteKit.</p>
+    <p>We'll also see a preview of this course, and what we'll be building.</p>
 `,
     implementations: [
       {

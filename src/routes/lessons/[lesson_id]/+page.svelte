@@ -11,7 +11,7 @@
   $: previousLesson = data.previousLesson;
   $: nextLesson = data.nextLesson;
 
-  let selectedFramework = localStorage.getItem('selectedFramework') || 'SvelteKit 1.0';
+  let selectedFramework = /*localStorage.getItem('selectedFramework') ||*/ 'SvelteKit 1.0';
   $: selectedImplementation = lesson.implementations.find(implementation => implementation.framework === selectedFramework);
   const selectFramework = (framework: string) => {
     selectedFramework = framework;
@@ -25,7 +25,7 @@
 {#if lesson.implementations.length > 0}
   <div class="tab-bar">
     <div class="tabs">
-      {#each lesson.implementations as implementation}
+      <!-- {#each lesson.implementations as implementation}
         <div
           class="tab framework-tab"
           style="--color: {frameworks[implementation.framework].color};"
@@ -35,7 +35,7 @@
         >
           <div>{implementation.framework}</div>
         </div>
-      {/each}
+      {/each} -->
     </div>
     <div class="tabs">
       {#if selectedImplementation?.githubUrl}
