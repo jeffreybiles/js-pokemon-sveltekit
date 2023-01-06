@@ -11,7 +11,6 @@
   export let data: PageData;
 
   $: frameworkSlug = $page.params.framework;
-  $: lesson_id = $page.params.lesson_id;
   $: framework = frameworkArray.find((f) => f.slug === frameworkSlug);
   $: lesson = data.lesson
   $: implementation = lesson?.implementations.find((i: Implementation) => i.framework === framework?.name);
