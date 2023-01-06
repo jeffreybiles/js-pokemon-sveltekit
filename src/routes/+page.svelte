@@ -4,37 +4,31 @@
   import { frameworkArray, type FrameworkName } from "$lib/frameworks";
   import { goto } from "$app/navigation";
   import type { PageData } from "./$types";
-
-  const startLearning = (framework: string) => {
-    localStorage.setItem('selectedFramework', framework);
-    goto('/lessons/101');
-  }
-
   export let data: PageData;
 
   const numLessons = (framework: FrameworkName) => {
     return data.lessons.filter((lesson) => {
-      return lesson.implementations.find(impl => impl.framework === framework)
+      return lesson.implementations.find(impl => impl.framework === framework)?.lengthInSeconds;
     }).length;
   };
 </script>
 <h1>Welcome to the Pokedex Tutorial</h1>
 <p>This video tutorial series will build the same app in 4 different Javascript meta-frameworks - Next 13, Remix 1.10, Nuxt 3, and SvelteKit 1.0</p>
 <p>Source code and demo site are available for each lesson.</p>
-<p class="status-report">Status: season 1 (22 lessons per framework) is planned, and the SvelteKit version is fully built out.</p>
-<p class="status-report">I have begun to film and release the SvelteKit tutorial series.  Other series coming soon.</p>
+<p class="status-report">Status: SvelteKit series is in production!</p>
+<p class="status-report">The next series will start in February.</p>
 
 <div class="framework-buttons">
   {#each frameworkArray as framework (framework.name)}
-    <button
+    <a
       class="framework-button"
-      on:click={() => startLearning(framework.name)}
+      href="/{framework.slug}"
       style="background-color: {framework.color};"
       class:disabled={numLessons(framework.name) === 0}
     >
       Learn {framework.name}
       <Iconify icon={framework.icon} />
-    </button>
+    </a>
   {/each}
 </div>
 
@@ -69,10 +63,11 @@
     padding: 1rem;
     cursor: pointer;
     gap: 1rem;
+    text-decoration: none;
   }
   .framework-button.disabled {
     opacity: 0.3;
-    cursor: not-allowed;
+    cursor: default;
   }
   .framework-button:hover {
     opacity: 0.8;
