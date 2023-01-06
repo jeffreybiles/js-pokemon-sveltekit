@@ -81,6 +81,7 @@
     display: flex;
     align-items: center;
     cursor: pointer;
+    padding-right: 8px;
   }
   .open-sidebar .text {
     padding-left: 4px;
