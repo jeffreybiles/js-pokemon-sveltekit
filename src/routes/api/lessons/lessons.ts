@@ -41,21 +41,21 @@ export const lessons: Lesson[] = [
 `,
     implementations: [
       {
-        releaseDate: 'January 6, 2022',
+        releaseDate: 'Jan 6',
         framework: 'SvelteKit 1.0',
         youtubeId: '_FJy4yUSmfc', // note: this is not actually the video for this lesson, this is a random video
       },
       {
         framework: 'Nuxt 3',
-        releaseDate: 'February 1, 2022',
+        releaseDate: 'Feb 1',
       },
       {
         framework: 'Next 13',
-        releaseDate: 'March 1, 2022',
+        releaseDate: 'Mar 1',
       },
       {
         framework: 'Remix 1.10',
-        releaseDate: 'April 1, 2022',
+        releaseDate: 'April 1',
       }
     ]
   },
@@ -76,22 +76,22 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 6, 2022',
+        releaseDate: 'Jan 6',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/2b834f9b789e591a66de81d767be4ed089b88157',
         youtubeId: 'VG7U1ESkbdE',
         lengthInSeconds: 300,
       },
       {
         framework: 'Nuxt 3',
-        // releaseDate: 'February 2, 2022',
+        // releaseDate: 'Feb 2',
       },
       {
         framework: 'Next 13',
-        // releaseDate: 'March 2, 2022',
+        // releaseDate: 'Mar 2',
       },
       {
         framework: 'Remix 1.10',
-        // releaseDate: 'April 2, 2022',
+        // releaseDate: 'April 2',
       },
     ]
   },
@@ -100,7 +100,7 @@ export const lessons: Lesson[] = [
     number: '03',
     name: 'Each Loops and Objects',
     demoSubdomain: '03-each-loops',
-    projectedRelease: 'January',
+    projectedRelease: 'Jan',
     description: `<p>Every app needs to display data, and it's often stored in arrays and objects.</p>
     <p>We'll use hardcoded data for now - the different generations of pokemon games.</p>
     <p>We'll learn:</p>
@@ -113,22 +113,22 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 6, 2022',
+        releaseDate: 'Jan 6',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/4e1239dd40be8057a807d34a489ab0f81a76035e',
         youtubeId: 'i2F1YcjALfo',
         lengthInSeconds: 386,
       },
       {
         framework: 'Nuxt 3',
-        // releaseDate: 'February 3, 2022',
+        // releaseDate: 'Feb 3',
       },
       {
         framework: 'Next 13',
-        // releaseDate: 'March 3, 2022',
+        // releaseDate: 'Mar 3',
       },
       {
         framework: 'Remix 1.10',
-        // releaseDate: 'April 3, 2022',
+        // releaseDate: 'April 3',
       },
     ],
   },
@@ -148,22 +148,22 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 6, 2022',
+        releaseDate: 'Jan 6',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/0b2408df3606070e4b9d28a3f30a88f371b32b0c',
         youtubeId: 'n1oyh99Bwlg',
         lengthInSeconds: 738,
       },
       {
         framework: 'Nuxt 3',
-        // releaseDate: 'February 4, 2022',
+        // releaseDate: 'Feb 4',
       },
       {
         framework: 'Next 13',
-        // releaseDate: 'March 4, 2022',
+        // releaseDate: 'Mar 4',
       },
       {
         framework: 'Remix 1.10',
-        // releaseDate: 'April 4, 2022',
+        // releaseDate: 'April 4',
       },
     ],
   },
@@ -171,27 +171,27 @@ export const lessons: Lesson[] = [
     id: '105',
     number: '05',
     name: 'Styling our Pokedex',
-    projectedRelease: 'January',
+    projectedRelease: 'Jan',
     demoSubdomain: '05-styling-pokedex',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 6, 2022',
+        releaseDate: 'Jan 6',
         youtubeId: 'KS_Z4gzToXA',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/3f6dd97957d98c3968fc0a5a2f80569a30e4268b',
         lengthInSeconds: 633,
       },
       {
         framework: 'Nuxt 3',
-        // releaseDate: 'February 5, 2022',
+        // releaseDate: 'Feb 5',
       },
       {
         framework: 'Next 13',
-        // releaseDate: 'March 5, 2022',
+        // releaseDate: 'Mar 5',
       },
       {
         framework: 'Remix 1.10',
-        // releaseDate: 'April 5, 2022',
+        // releaseDate: 'April 5',
       },
     ],
     description: `<p>We'll take the raw data from the pokemon API and turn it into a page that's easier to look at and understand.</p>
@@ -203,27 +203,27 @@ export const lessons: Lesson[] = [
     id: '106',
     number: '06',
     name: 'Reactivity',
-    projectedRelease: 'January',
+    projectedRelease: 'Jan',
     demoSubdomain: '06-reactivity',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 6, 2022',
+        releaseDate: 'Jan 6',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/d5d7ee66ee8aee81ef4e27b439d070257d47bb05',
         youtubeId: '0YovA4Xz5ik',
         lengthInSeconds: 491,
       },
       {
         framework: 'Nuxt 3',
-        // releaseDate: 'February 6, 2022',
+        // releaseDate: 'Feb 6',
       },
       {
         framework: 'Next 13',
-        // releaseDate: 'March 6, 2022',
+        // releaseDate: 'Mar 6',
       },
       {
         framework: 'Remix 1.10',
-        // releaseDate: 'April 6, 2022',
+        // releaseDate: 'April 6',
       },
 
     ],
@@ -241,24 +241,24 @@ export const lessons: Lesson[] = [
     id: '107',
     number: '07',
     name: 'Links and Query Params',
-    projectedRelease: 'January',
+    projectedRelease: 'Jan',
     // demoSubdomain: '6-links-query-params',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 8, 2022',
+        releaseDate: 'Jan 8',
       },
       {
         framework: 'Nuxt 3',
-        // releaseDate: 'February 7, 2022',
+        // releaseDate: 'Feb 7',
       },
       {
         framework: 'Next 13',
-        // releaseDate: 'March 7, 2022',
+        // releaseDate: 'Mar 7',
       },
       {
         framework: 'Remix 1.10',
-        // releaseDate: 'April 7, 2022',
+        // releaseDate: 'April 7',
       }
     ],
     description: `
@@ -271,24 +271,24 @@ export const lessons: Lesson[] = [
     id: '108',
     number: '08',
     name: 'Reusable Components',
-    projectedRelease: 'January',
+    projectedRelease: 'Jan',
     // demoSubdomain: '8-reusable-components',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 9, 2022',
+        releaseDate: 'Jan 9',
       },
       {
         framework: 'Nuxt 3',
-        // releaseDate: 'February 8, 2022',
+        // releaseDate: 'Feb 8',
       },
       {
         framework: 'Next 13',
-        // releaseDate: 'March 8, 2022',
+        // releaseDate: 'Mar 8',
       },
       {
         framework: 'Remix 1.10',
-        // releaseDate: 'April 8, 2022',
+        // releaseDate: 'April 8',
       }
     ],
     description: `
@@ -305,23 +305,23 @@ export const lessons: Lesson[] = [
     id: '109',
     number: '09',
     name: 'Loading pokemon by generation',
-    projectedRelease: 'January',
+    projectedRelease: 'Jan',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 10, 2022',
+        releaseDate: 'Jan 10',
       },
       {
         framework: 'Nuxt 3',
-        // releaseDate: 'February 9, 2022',
+        // releaseDate: 'Feb 9',
       },
       {
         framework: 'Next 13',
-        // releaseDate: 'March 9, 2022',
+        // releaseDate: 'Mar 9',
       },
       {
         framework: 'Remix 1.10',
-        // releaseDate: 'April 9, 2022',
+        // releaseDate: 'April 9',
       }
     ],
     description: `<p>Load pokemon data for a specific generation, or for all generations.</p>
@@ -332,24 +332,24 @@ export const lessons: Lesson[] = [
     id: '110',
     number: '10',
     name: 'Search Form',
-    projectedRelease: 'January',
+    projectedRelease: 'Jan',
     // demoSubdomain: '9-search-form',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 11, 2022',
+        releaseDate: 'Jan 11',
       },
       {
         framework: 'Nuxt 3',
-        // releaseDate: 'February 10, 2022',
+        // releaseDate: 'Feb 10',
       },
       {
         framework: 'Next 13',
-        // releaseDate: 'March 10, 2022',
+        // releaseDate: 'Mar 10',
       },
       {
         framework: 'Remix 1.10',
-        // releaseDate: 'April 10, 2022',
+        // releaseDate: 'April 10',
       }
     ],
     description: `
@@ -365,12 +365,12 @@ export const lessons: Lesson[] = [
     id: '111',
     number: '11',
     name: 'Filesystem-Based Router',
-    projectedRelease: 'February',
+    projectedRelease: 'Feb',
     // demoSubdomain: '10-filesystem-based-router',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 12, 2022',
+        releaseDate: 'Jan 12',
       }
     ],
     description: `
@@ -386,12 +386,12 @@ export const lessons: Lesson[] = [
     id: '112',
     number: '12',
     name: 'Layouts, Nested Routes, and "breaking out" of Layouts',
-    projectedRelease: 'February',
+    projectedRelease: 'Feb',
     // demoSubdomain: '11-layouts-nested-routes',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 13, 2022',
+        releaseDate: 'Jan 13',
       }
     ],
     description:`
@@ -408,12 +408,12 @@ export const lessons: Lesson[] = [
     id: '113',
     number: '13',
     name: 'Sharing data across the app',
-    projectedRelease: 'February',
+    projectedRelease: 'Feb',
     // demoSubdomain: '12-stores-writable-derived',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 15, 2022',
+        releaseDate: 'Jan 15',
       }
     ],
     // TODO: may need to make implementation-specific descriptions?  Start with regular description, then do implementation-specific?
@@ -427,12 +427,12 @@ export const lessons: Lesson[] = [
     id: '114',
     number: '14',
     name: 'Dynamic Routes',
-    projectedRelease: 'February',
+    projectedRelease: 'Feb',
     // demoSubdomain: '13-dynamic-routes',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 16, 2022',
+        releaseDate: 'Jan 16',
       }
     ],
     description: `
@@ -450,12 +450,12 @@ export const lessons: Lesson[] = [
     id: '115',
     number: '15',
     name: 'Displaying Species Stats',
-    projectedRelease: 'February',
+    projectedRelease: 'Feb',
     // demoSubdomain: '14-displaying-species-stats',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 17, 2022',
+        releaseDate: 'Jan 17',
       }
     ],
     description: `
@@ -469,12 +469,12 @@ export const lessons: Lesson[] = [
     id: '116',
     number: '16',
     name: 'Persisting Data with LocalStorage',
-    projectedRelease: 'February',
+    projectedRelease: 'Feb',
     // demoSubdomain: '15-persisting-data-with-localstorage',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 18, 2022',
+        releaseDate: 'Jan 18',
       }
     ],
     description: `
@@ -492,12 +492,12 @@ export const lessons: Lesson[] = [
     id: '117',
     number: '17',
     name: 'Individualizing Monsters',
-    projectedRelease: 'March',
+    projectedRelease: 'Mar',
     // demoSubdomain: '16-individualizing-monsters',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 19, 2022',
+        releaseDate: 'Jan 19',
       }
     ],
     description: `
@@ -517,12 +517,12 @@ export const lessons: Lesson[] = [
     number: '18',
     // TODO - make this generic.  How?  Hard
     name: 'Form actions, use:enhance, and goto',
-    projectedRelease: 'March',
+    projectedRelease: 'Mar',
     // demoSubdomain: '17-form-actions-use-enhance-goto',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 20, 2022',
+        releaseDate: 'Jan 20',
       }
     ],
     description: `
@@ -535,12 +535,12 @@ export const lessons: Lesson[] = [
     id: '119',
     number: '19',
     name: 'Caught Monster Page',
-    projectedRelease: 'March',
+    projectedRelease: 'Mar',
     // demoSubdomain: '18-caught-monster-page',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 22, 2022',
+        releaseDate: 'Jan 22',
       }
     ],
     description: `
@@ -553,12 +553,12 @@ export const lessons: Lesson[] = [
     id: '120',
     number: '20',
     name: 'Renaming Monsters',
-    projectedRelease: 'March',
+    projectedRelease: 'Mar',
     // demoSubdomain: '19-renaming-monsters',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 23, 2022',
+        releaseDate: 'Jan 23',
       }
     ],
     description: `
@@ -569,12 +569,12 @@ export const lessons: Lesson[] = [
     id: '121',
     number: '21',
     name: 'Error Routes and other techniques',
-    projectedRelease: 'March',
+    projectedRelease: 'Mar',
     // demoSubdomain: '20-error-routes',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 24, 2022',
+        releaseDate: 'Jan 24',
       }
     ],
     description: `
@@ -587,12 +587,12 @@ export const lessons: Lesson[] = [
     id: '122',
     number: '22',
     name: 'Animating our monsters',
-    projectedRelease: 'March',
+    projectedRelease: 'Mar',
     // demoSubdomain: '21-animating-monsters',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 25, 2022',
+        releaseDate: 'Jan 25',
       }
     ],
     description: `
@@ -603,12 +603,12 @@ export const lessons: Lesson[] = [
     id: '123',
     number: '23',
     name: 'Deploying our app',
-    projectedRelease: 'March',
+    projectedRelease: 'Mar',
     // demoSubdomain: '22-deploying-our-app',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'January 26, 2022',
+        releaseDate: 'Jan 26',
       }
     ],
     description: `
