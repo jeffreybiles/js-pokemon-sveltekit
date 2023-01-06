@@ -40,7 +40,7 @@ export const lessons: Lesson[] = [
 `,
     implementations: [
       {
-        releaseDate: 'Jan 6',
+        // releaseDate: 'Jan 6',
         framework: 'SvelteKit 1.0',
         youtubeId: '_FJy4yUSmfc', // note: this is not actually the video for this lesson, this is a random video
       },
@@ -75,7 +75,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 6',
+        // releaseDate: 'Jan 6',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/2b834f9b789e591a66de81d767be4ed089b88157',
         youtubeId: 'VG7U1ESkbdE',
         lengthInSeconds: 300,
@@ -112,7 +112,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 6',
+        // releaseDate: 'Jan 6',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/4e1239dd40be8057a807d34a489ab0f81a76035e',
         youtubeId: 'i2F1YcjALfo',
         lengthInSeconds: 386,
@@ -147,7 +147,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 6',
+        // releaseDate: 'Jan 6',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/0b2408df3606070e4b9d28a3f30a88f371b32b0c',
         youtubeId: 'n1oyh99Bwlg',
         lengthInSeconds: 738,
@@ -175,7 +175,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 6',
+        // releaseDate: 'Jan 6',
         youtubeId: 'KS_Z4gzToXA',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/3f6dd97957d98c3968fc0a5a2f80569a30e4268b',
         lengthInSeconds: 633,
@@ -207,7 +207,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 6',
+        // releaseDate: 'Jan 6',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/d5d7ee66ee8aee81ef4e27b439d070257d47bb05',
         youtubeId: '0YovA4Xz5ik',
         lengthInSeconds: 491,
@@ -245,7 +245,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 8',
+        // releaseDate: 'Jan 8',
       },
       {
         framework: 'Nuxt 3',
@@ -275,7 +275,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 9',
+        // releaseDate: 'Jan 9',
       },
       {
         framework: 'Nuxt 3',
@@ -308,7 +308,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 10',
+        // releaseDate: 'Jan 10',
       },
       {
         framework: 'Nuxt 3',
@@ -336,7 +336,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 11',
+        // releaseDate: 'Jan 11',
       },
       {
         framework: 'Nuxt 3',
@@ -369,7 +369,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 12',
+        // releaseDate: 'Jan 12',
       }
     ],
     description: `
@@ -390,7 +390,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 13',
+        // releaseDate: 'Jan 13',
       }
     ],
     description:`
@@ -412,7 +412,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 15',
+        // releaseDate: 'Jan 15',
       }
     ],
     // TODO: may need to make implementation-specific descriptions?  Start with regular description, then do implementation-specific?
@@ -431,7 +431,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 16',
+        // releaseDate: 'Jan 16',
       }
     ],
     description: `
@@ -454,7 +454,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 17',
+        // releaseDate: 'Jan 17',
       }
     ],
     description: `
@@ -473,7 +473,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 18',
+        // releaseDate: 'Jan 18',
       }
     ],
     description: `
@@ -496,7 +496,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 19',
+        // releaseDate: 'Jan 19',
       }
     ],
     description: `
@@ -521,7 +521,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 20',
+        // releaseDate: 'Jan 20',
       }
     ],
     description: `
@@ -539,7 +539,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 22',
+        // releaseDate: 'Jan 22',
       }
     ],
     description: `
@@ -557,7 +557,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 23',
+        // releaseDate: 'Jan 23',
       }
     ],
     description: `
@@ -573,7 +573,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 24',
+        // releaseDate: 'Jan 24',
       }
     ],
     description: `
@@ -591,7 +591,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 25',
+        // releaseDate: 'Jan 25',
       }
     ],
     description: `
@@ -607,7 +607,7 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        releaseDate: 'Jan 26',
+        // releaseDate: 'Jan 26',
       }
     ],
     description: `
