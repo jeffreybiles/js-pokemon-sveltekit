@@ -8,7 +8,11 @@
   const changeFramework = (e: any) => {
     const frameworkSlug = e.target.value;
     if(!lessonId) {
-      goto(`/${frameworkSlug}`);
+      if(frameworkSlug === 'lessons') {
+        goto('/');
+      } else {
+        goto(`/${frameworkSlug}`);
+      }
     } else {
       goto(`/${frameworkSlug}/${lessonId}`);
     }

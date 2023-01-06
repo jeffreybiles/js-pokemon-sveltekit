@@ -1,6 +1,7 @@
 <script lang="ts">
   import { page } from "$app/stores";
   import { frameworkArray } from "$lib/frameworks";
+  import { timeDisplay } from "$lib/utils";
   import Icon from "@iconify/svelte";
   import type { PageData } from "./$types";
 
@@ -8,12 +9,6 @@
 
   $: frameworkSlug = $page.params.framework;
   $: framework = frameworkArray.find((f) => f.slug === frameworkSlug);
-
-  const timeDisplay = (seconds: number) => {
-    const minutes = Math.floor(seconds / 60);
-    const secondsLeft = seconds % 60;
-    return `${minutes}:${secondsLeft < 10 ? "0" : ""}${secondsLeft}`;
-  };
 </script>
 
 <div class="framework-page">

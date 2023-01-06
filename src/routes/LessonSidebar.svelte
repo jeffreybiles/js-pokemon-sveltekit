@@ -1,12 +1,15 @@
 <script lang="ts">
-  import type { Lesson } from './api/lessons/lessons'
+  import type { Lesson, lessons } from './api/lessons/lessons'
   import Iconify from '@iconify/svelte';
-  import { frameworks } from '$lib/frameworks';
+  import { frameworkArray, frameworks, type FrameworkName } from '$lib/frameworks';
+  import { timeDisplay } from '$lib/utils';
 
   export let lessons: Lesson[] = []
   export let selectedLessonId: string = ''
+  export let selectedFramework: string;
   import { sidebarOpen } from '../stores';
   import { onMount } from 'svelte';
+  $: selectedFrameworkName = frameworkArray.find(framework => framework.slug === selectedFramework)?.name;
 
   const closeIfSmallScreen = () => {
     if(window.innerWidth < 700) {
@@ -33,32 +36,45 @@
     >
       <Iconify icon="material-symbols:keyboard-double-arrow-left" />
     </div>
-    <a class="lesson hoverable-button" class:active={!selectedLessonId} href="/">
+    <a class="lesson hoverable-button" class:active={!selectedLessonId} href="/{selectedFramework ?? ''}">
       <div class="lesson-number"></div>
       <div class="lesson-title">Home</div>
     </a>
 
     {#each lessons as lesson}
+      {@const implementation = lesson.implementations.find(implementation => implementation.framework === selectedFrameworkName)}
       <a
         class="lesson hoverable-button"
         class:active={lesson.id == selectedLessonId}
-        href="/lessons/{lesson.id}"
+        href="/{selectedFramework ?? 'lessons'}/{lesson.id}"
         on:click={closeIfSmallScreen}
       >
         <div class="lesson-number">{lesson.number}</div>
         <div class="lesson-title">{lesson.name}</div>
-        {#if lesson.implementations.length > 0}
-        <div class="lesson-implementations">
-          {#each lesson.implementations as implementation}
-            {#if implementation.lengthInSeconds}
-              <Iconify icon={frameworks[implementation.framework].icon} />
-            {/if}
-          {/each}
-        </div>
+        {#if !selectedFramework}
+          {#if lesson.implementations.length > 0}
+            <div class="lesson-implementations">
+              {#each lesson.implementations as implementation}
+                {#if implementation.lengthInSeconds}
+                  <Iconify icon={frameworks[implementation.framework].icon} />
+                {/if}
+              {/each}
+            </div>
+          {:else}
+            <div class="projected-release-date">
+              {lesson.projectedRelease}
+            </div>
+          {/if}
         {:else}
-        <div class="projected-release-date">
-          {lesson.projectedRelease}
-        </div>
+          {#if implementation?.lengthInSeconds}
+            <div class="time-display">
+              {timeDisplay(implementation?.lengthInSeconds)}
+            </div>
+          {:else}
+            <div class="projected-release-date">
+             {implementation?.releaseDate ?? 'Soon'}
+            </div>
+          {/if}
         {/if}
         
       </a>
@@ -116,13 +132,17 @@
 .lesson-implementations :global(svg) {
   margin: 2px;
 }
-.projected-release-date {
+.projected-release-date, .time-display {
   font-size: 12px;
-  font-weight: 300;
   color: #555;
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
+  margin-right: 4px;
+}
+.projected-release-date {
+  font-weight: 300;
+  color: #999;
 }
 
 @media (max-width: 700px) {
