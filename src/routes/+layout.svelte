@@ -8,8 +8,9 @@ import Navbar from './Navbar.svelte';
 import Toast from '$lib/Toast.svelte';
 import { browser } from '$app/environment';
 import { webVitals } from '$lib/vitals';
-
 import { inject } from '@vercel/analytics';
+import { frameworkArray } from '$lib/frameworks';
+
 inject();
 
 let analyticsId = import.meta.env.VERCEL_ANALYTICS_ID;
@@ -21,9 +22,18 @@ $: if (browser && analyticsId) {
   })
 }
 
+$: frameworkSlug = $page.params.framework;
+$: framework = frameworkArray.find((f) => f.slug === frameworkSlug);
+
 </script>
 
-<div class="container">
+<div class="container"
+  style="
+  --color: {framework?.color || '#777'};
+  --lightColor: {framework?.lightColor || '#eee'};
+  --darkColor: {framework?.darkColor || '#333'};
+  "
+>
   <LessonSidebar
     lessons={data.lessons}
     selectedLessonId={$page.params.lesson_id}
@@ -78,16 +88,17 @@ $: if (browser && analyticsId) {
   color: #555;
 }
 :global(.hoverable-button:hover), :global(.hoverable-button:hover div) {
-  background-color: #333;
+  background-color: var(--darkColor);
   color: #fff;
 }
 :global(.hoverable-button.active), :global(.hoverable-button.active div) {
-  background-color: #555;
+  background-color: var(--color);
   color: #fff;
+  font-weight: 500;
 }
 
 :global(.hoverable-button.active:hover), :global(.hoverable-button.active:hover div) {
-  background-color: #222;
+  background-color: var(--darkColor);
   color: #fff;
 }
 

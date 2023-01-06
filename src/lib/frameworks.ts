@@ -34,9 +34,9 @@ export const frameworks: {[key in FrameworkName]: FrameworkProperties} = {
   },
   'Remix 1.10': {
     icon: 'logos:remix-icon',
-    color: '#FF4D5B',
-    lightColor: '#FF9E9E',
-    darkColor: '#B22A37',
+    color: '#DFB700',
+    lightColor: '#FFF9A0',
+    darkColor: '#CFA700',
     slug: 'remix-1-10',
   },
 

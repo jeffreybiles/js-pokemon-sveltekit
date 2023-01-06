@@ -26,11 +26,6 @@
     <a
       href="/{frameworkSlug}/{lesson.id}"
       class="lesson-link {implementation?.lengthInSeconds ? 'implemented' : 'not-implemented'}"
-      style="
-        --color: {framework?.color};
-        --lightColor: {framework?.lightColor};
-        --darkColor: {framework?.darkColor};
-      "
     >
       {lesson.name}
       {#if implementation?.lengthInSeconds}
@@ -60,7 +55,7 @@
     display: flex;
     justify-content: space-between;
     padding: 8px;
-    border: 1px solid var(--lightColor);
+    border: 1px solid var(--darkColor);
     border-radius: 4px;
     margin-bottom: 8px;
     text-decoration: none;
@@ -74,7 +69,7 @@
   }
   .not-implemented {
     background-color: #eeeeee;
-    border-color: #aaa;
+    border-color: var(--lightColor);
     opacity: 0.6;
   }
 </style>

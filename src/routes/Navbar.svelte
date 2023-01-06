@@ -41,8 +41,6 @@
       {#each frameworkArray as framework}
         {@const implementation = implementations.find((i) => i.framework == framework.name)}
         {@const unreleased = !implementation?.lengthInSeconds}
-        <!-- So it turns out that the select box is not stylable -->
-        <!-- So we're going to use svelte-select instead -->
         <option value={framework.slug} class:unreleased>
           {framework.name}
           {#if unreleased && lessonId}
@@ -64,7 +62,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 8px;
-  background-color: #333;
+  background-color: var(--darkColor);
   color: #fff;
   font-size: 16px;
 }

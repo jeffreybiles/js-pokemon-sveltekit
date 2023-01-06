@@ -114,7 +114,7 @@
 .lesson {
   display: grid;
   grid-template-columns: 30px 1fr 80px;
-  border-bottom: 1px solid #ccc;
+  border-bottom: 1px solid var(--darkColor);
   text-decoration: none;
   padding: 8px 0;
 }

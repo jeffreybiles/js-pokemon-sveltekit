@@ -4,8 +4,9 @@
   import VideoPlayer from "$lib/VideoPlayer.svelte";
   import Navigation from "$lib/Navigation.svelte";
   import type { PageData } from "./$types";
-    import Icon from "@iconify/svelte";
-    import type { Implementation } from "src/routes/api/lessons/lessons";
+  import Icon from "@iconify/svelte";
+  import type { Implementation } from "src/routes/api/lessons/lessons";
+  import MailingListForm from "$lib/MailingListForm.svelte";
 
   export let data: PageData;
 
@@ -36,7 +37,7 @@
   {:else if implementation?.releaseDate}
    <p>This video has an estimated release date of {implementation?.releaseDate}</p>
   {:else}
-    <p>This video is not yet created for {implementation.framework}</p>
+    <p>This video is not yet created for {framework.name}</p>
   {/if}
   <Navigation
     baseFolder={frameworkSlug}
@@ -47,6 +48,7 @@
   <div class="description">
     {@html lesson.description}
   </div>
+  <MailingListForm />
 {/if}
 
 <!-- TODO - links to other implementations -->
