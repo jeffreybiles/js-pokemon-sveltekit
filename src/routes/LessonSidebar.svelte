@@ -52,19 +52,13 @@
         <div class="lesson-number">{lesson.number}</div>
         <div class="lesson-title">{lesson.name}</div>
         {#if !selectedFramework}
-          {#if lesson.implementations.length > 0}
-            <div class="lesson-implementations">
-              {#each lesson.implementations as implementation}
-                {#if implementation.lengthInSeconds}
-                  <Iconify icon={frameworks[implementation.framework].icon} />
-                {/if}
-              {/each}
-            </div>
-          {:else}
-            <div class="projected-release-date">
-              {lesson.projectedRelease}
-            </div>
-          {/if}
+          <div class="lesson-implementations">
+            {#each lesson.implementations as implementation}
+              {#if implementation.lengthInSeconds}
+                <Iconify icon={frameworks[implementation.framework].icon} />
+              {/if}
+            {/each}
+          </div>
         {:else}
           {#if implementation?.lengthInSeconds}
             <div class="time-display">
