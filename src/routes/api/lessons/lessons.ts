@@ -242,11 +242,13 @@ export const lessons: Lesson[] = [
     number: '07',
     name: 'Links and Query Params',
     projectedRelease: 'Jan',
-    // demoSubdomain: '6-links-query-params',
+    demoSubdomain: '07-query-params',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        // releaseDate: 'Jan 8',
+        youtubeId: 'n00qRGPfyCc',
+        lengthInSeconds: 707,
+        githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/b84d2fffeb15909b7a66315dc667e4e7f6db1935'
       },
       {
         framework: 'Nuxt 3',
