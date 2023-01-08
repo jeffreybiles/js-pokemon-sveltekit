@@ -304,33 +304,6 @@ export const lessons: Lesson[] = [
   {
     id: '109',
     number: '09',
-    name: 'Loading pokemon by generation',
-    projectedRelease: 'Jan',
-    implementations: [
-      {
-        framework: 'SvelteKit 1.0',
-        // releaseDate: 'Jan 10',
-      },
-      {
-        framework: 'Nuxt 3',
-        // releaseDate: 'Feb 9',
-      },
-      {
-        framework: 'Next 13',
-        // releaseDate: 'Mar 9',
-      },
-      {
-        framework: 'Remix 1.10',
-        // releaseDate: 'April 9',
-      }
-    ],
-    description: `<p>Load pokemon data for a specific generation, or for all generations.</p>
-    <p>To build this feature, we'll combine our knowledge of links and query params, reactivity, and the load function.</p>
-    `,
-  },
-  {
-    id: '110',
-    number: '10',
     name: 'Search Form',
     projectedRelease: 'Jan',
     // demoSubdomain: '9-search-form',
@@ -360,6 +333,34 @@ export const lessons: Lesson[] = [
         <li>How to use a form submit to trigger a function</li>
         <li>How to filter data based on dynamic parameters</li>
       </ul>`
+  },
+
+  {
+    id: '110',
+    number: '10',
+    name: 'Loading pokemon by generation',
+    projectedRelease: 'Jan',
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        // releaseDate: 'Jan 10',
+      },
+      {
+        framework: 'Nuxt 3',
+        // releaseDate: 'Feb 9',
+      },
+      {
+        framework: 'Next 13',
+        // releaseDate: 'Mar 9',
+      },
+      {
+        framework: 'Remix 1.10',
+        // releaseDate: 'April 9',
+      }
+    ],
+    description: `<p>Load pokemon data for a specific generation, or for all generations.</p>
+    <p>To build this feature, we'll combine our knowledge of links and query params, reactivity, and the load function.</p>
+    `,
   },
   {
     id: '111',
