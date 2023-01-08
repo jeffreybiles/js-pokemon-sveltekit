@@ -177,7 +177,7 @@ export const lessons: Lesson[] = [
       {
         framework: 'SvelteKit 1.0',
         // releaseDate: 'Jan 6',
-        youtubeId: 'KS_Z4gzToXA',
+        youtubeId: 'tXlqsNzXOLA',
         githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/3f6dd97957d98c3968fc0a5a2f80569a30e4268b',
         lengthInSeconds: 633,
       },
