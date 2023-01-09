@@ -274,11 +274,13 @@ export const lessons: Lesson[] = [
     number: '08',
     name: 'Reusable Components',
     projectedRelease: 'Jan',
-    // demoSubdomain: '8-reusable-components',
+    demoSubdomain: '08-reusable-components',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        // releaseDate: 'Jan 9',
+        youtubeId: '7h6slC4HcpI',
+        lengthInSeconds: 694,
+        githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/7ad164a1d343e9b2bb29fc16aa73cb9fe4c656cf'
       },
       {
         framework: 'Nuxt 3',
