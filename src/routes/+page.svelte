@@ -12,6 +12,10 @@
     }).length;
   };
 </script>
+
+<svelte:head>
+	<title>JS Pokemon - learn Javascript frameworks by building a Pokedex</title>
+</svelte:head>
 <h1>Learn SvelteKit 1.0.  No Svelte experience required.</h1>
 <p>Build a pokedex from scratch in SvelteKit 1.0 and Svelte 3.</p>
 <!-- <p>This video tutorial series will build the same app in multiple Javascript meta-frameworks.</p> -->

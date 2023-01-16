@@ -16,6 +16,10 @@
   $: implementation = lesson?.implementations.find((i: Implementation) => i.framework === framework?.name);
 </script>
 
+<svelte:head>
+	<title>{framework?.name || frameworkSlug} lesson {lesson.number} - {lesson.name}</title>
+</svelte:head>
+
 {#if lesson}
   <div class="flex-between">
     <h1>{lesson?.name}</h1>

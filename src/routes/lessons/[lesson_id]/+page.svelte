@@ -19,6 +19,9 @@
   }
 </script>
 
+<svelte:head>
+	<title>JS Pokemon lesson {lesson.number} - {lesson.name}</title>
+</svelte:head>
 
 <h1 class="lesson-title">{lesson.name}</h1>
 

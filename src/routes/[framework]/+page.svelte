@@ -10,8 +10,12 @@
   $: frameworkSlug = $page.params.framework;
   $: framework = frameworkArray.find((f) => f.slug === frameworkSlug);
 </script>
+<svelte:head>
+	<title>JS Pokemon - learn {framework?.name || frameworkSlug} by building a Pokedex</title>
+</svelte:head>
 
 <div class="framework-page">
+
 {#if framework}
   <h1 class="title">
     {framework.name}
