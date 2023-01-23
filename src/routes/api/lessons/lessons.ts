@@ -310,11 +310,13 @@ export const lessons: Lesson[] = [
     number: '09',
     name: 'Search Form',
     projectedRelease: 'Jan',
-    // demoSubdomain: '9-search-form',
+    demoSubdomain: '09-search-form',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        // releaseDate: 'Jan 11',
+        lengthInSeconds: 560,
+        youtubeId: '9clYIOllf9s',
+        githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/65b7895e303d3ab8a1f381e7213d0f5589f95a42',
       },
       {
         framework: 'Nuxt 3',
