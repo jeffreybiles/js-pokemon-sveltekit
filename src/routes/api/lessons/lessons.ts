@@ -345,11 +345,14 @@ export const lessons: Lesson[] = [
     id: '110',
     number: '10',
     name: 'Loading pokemon by generation',
+    demoSubdomain: '10-loading-pokemon-by-generation',
     projectedRelease: 'Jan',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
-        // releaseDate: 'Jan 10',
+        lengthInSeconds: 738,
+        githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/324cf2ddf4e07424d94e02d8b3800b79a9c6e635',
+        youtubeId: 'YY2XlbQOABw',
       },
       {
         framework: 'Nuxt 3',
