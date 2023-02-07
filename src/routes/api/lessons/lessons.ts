@@ -380,17 +380,25 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
+        youtubeId: 'l1E48y1trrw',
+        lengthInSeconds: 567,
         // releaseDate: 'Jan 12',
       }
     ],
     description: `
-      <p>We want to add new pages to our app - an 'about' page explaining the app, and a 'my-pokemon' page showing your caught monsters.
-      <p>We'll learn:</p>
+      <p>This video shows the basics of SvelteKit's filesystem-based router.</p>
+      <p>We'll use the following file types:</p>
       <ul>
-        <li>How to add a new route</li>
-        <li>How to navigate between routes</li>
-        <li>The file-based router's naming scheme</li>
-      </ul>`
+        <li>+page.svelte</li>
+        <li>+page.ts</li>
+        <li>+page.server.ts</li>
+        <li>+layout.svelte</li>
+        <li>+error.svelte</li>
+      </ul>
+      <p>We'll also show nested routes and nested layouts.</p>
+      <p>This video is an overview, so there's no github commit or demo page.</p>
+      <p>In the next videos, we'll start to use this knowledge in our pokedex app.</p>
+    `
   },
   {
     id: '112',
