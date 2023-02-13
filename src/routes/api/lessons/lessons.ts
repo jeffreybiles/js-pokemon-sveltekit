@@ -403,22 +403,25 @@ export const lessons: Lesson[] = [
   {
     id: '112',
     number: '12',
-    name: 'Layouts, Nested Routes, and "breaking out" of Layouts',
+    name: 'Building the navbar layout',
     projectedRelease: 'Feb',
-    // demoSubdomain: '11-layouts-nested-routes',
+    demoSubdomain: '12-navbar-layout',
     implementations: [
       {
         framework: 'SvelteKit 1.0',
+        youtubeId: '4shiKsuiozo',
+        lengthInSeconds: 492,
+        githubUrl: '8411eaa0340421adb14f182cde4433481640bb6a'
         // releaseDate: 'Jan 13',
       }
     ],
     description:`
-      <p>We want to add a navbar to our app, to make it easier to navigate between pages.</p>
-      <p>We'll learn:</p>
+      <p>A navbar will make it easier to navigate between pages.</p>
+      <p>We'll use several Svelte techniques we've leared, such as:</p>
       <ul>
-        <li>How to add a layout</li>
-        <li>How to add nested routes</li>
-        <li>How to "break out" of a layout</li>
+        <li>+layout.svelte pages</li>
+        <li>:global CSS</li>
+        <li>the $page store</li>
       </ul>
     `
   },
