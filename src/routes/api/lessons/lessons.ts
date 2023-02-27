@@ -428,7 +428,29 @@ export const lessons: Lesson[] = [
   {
     id: '113',
     number: '13',
-    name: 'Sharing data across the app',
+    name: 'Svelte Stores',
+    implementations: [
+      {
+        framework: 'SvelteKit 1.0',
+        youtubeId: 'x-cvvYQ13VE',
+        lengthInSeconds: 754,
+        githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/5cd3022f323432f134e55d64978ef3157275c053',
+      }
+    ],
+    description: `
+      <p>Svelte stores are used to share data across components.  The core concept is similar to Solid/Preact Signals.</p>
+      <p>We'll learn about:</p>
+      <ul>
+        <li>Writable stores</li>
+        <li>Derived stores</li>
+        <li>Readable, readonly, and custom stores</li>
+      </ul>
+    `
+  },
+  {
+    id: '114',
+    number: '14',
+    name: 'Catching Monsters',
     projectedRelease: 'Feb',
     // demoSubdomain: '12-stores-writable-derived',
     implementations: [
@@ -442,11 +464,12 @@ export const lessons: Lesson[] = [
       <p>We want to fill out the 'my-pokemon' page in our app, to show the monsters we've caught.</p>
       <p>To do that, we'll need to track that data across components.</p>
       <p>In Svelte, this is done with 'stores', and we'll learn about writable and observable stores.</p>
-      <p>In Nuxt this is done with 'composables', and we'll learn about a simple pattern to make this happen.</p>`
+      <p>In Nuxt this is done with 'composables', and we'll learn about a simple pattern to make this happen.</p>
+    `
   },
   {
-    id: '114',
-    number: '14',
+    id: '115',
+    number: '15',
     name: 'Dynamic Routes',
     projectedRelease: 'Feb',
     // demoSubdomain: '13-dynamic-routes',
@@ -468,8 +491,8 @@ export const lessons: Lesson[] = [
       </ul>`
   },
   {
-    id: '115',
-    number: '15',
+    id: '116',
+    number: '16',
     name: 'Displaying Species Stats',
     projectedRelease: 'Feb',
     // demoSubdomain: '14-displaying-species-stats',
@@ -487,8 +510,8 @@ export const lessons: Lesson[] = [
     `
   },
   {
-    id: '116',
-    number: '16',
+    id: '117',
+    number: '17',
     name: 'Persisting Data with LocalStorage',
     projectedRelease: 'Feb',
     // demoSubdomain: '15-persisting-data-with-localstorage',
@@ -510,8 +533,8 @@ export const lessons: Lesson[] = [
     `
   },
   {
-    id: '117',
-    number: '17',
+    id: '118',
+    number: '18',
     name: 'Individualizing Monsters',
     projectedRelease: 'Mar',
     // demoSubdomain: '16-individualizing-monsters',
@@ -534,8 +557,8 @@ export const lessons: Lesson[] = [
       </ul>`
   },
   {
-    id: '118',
-    number: '18',
+    id: '119',
+    number: '19',
     // TODO - make this generic.  How?  Hard
     name: 'Form actions, use:enhance, and goto',
     projectedRelease: 'Mar',
@@ -553,8 +576,8 @@ export const lessons: Lesson[] = [
     `,
   },
   {
-    id: '119',
-    number: '19',
+    id: '120',
+    number: '20',
     name: 'Caught Monster Page',
     projectedRelease: 'Mar',
     // demoSubdomain: '18-caught-monster-page',
@@ -571,8 +594,8 @@ export const lessons: Lesson[] = [
     `
   },
   {
-    id: '120',
-    number: '20',
+    id: '121',
+    number: '21',
     name: 'Renaming Monsters',
     projectedRelease: 'Mar',
     // demoSubdomain: '19-renaming-monsters',
@@ -587,8 +610,8 @@ export const lessons: Lesson[] = [
       <p>We'll add a form to our monster detail page, and use what we've learned so far to make it a smooth experience.</p>`
   },
   {
-    id: '121',
-    number: '21',
+    id: '122',
+    number: '22',
     name: 'Error Routes and other techniques',
     projectedRelease: 'Mar',
     // demoSubdomain: '20-error-routes',
@@ -605,8 +628,8 @@ export const lessons: Lesson[] = [
       <p>In the second, we'll handle an error that happens in the frontend code.</p>`
   },
   {
-    id: '122',
-    number: '22',
+    id: '123',
+    number: '23',
     name: 'Animating our monsters',
     projectedRelease: 'Mar',
     // demoSubdomain: '21-animating-monsters',
@@ -621,8 +644,8 @@ export const lessons: Lesson[] = [
     `
   },
   {
-    id: '123',
-    number: '23',
+    id: '124',
+    number: '24',
     name: 'Deploying our app',
     projectedRelease: 'Mar',
     // demoSubdomain: '22-deploying-our-app',
