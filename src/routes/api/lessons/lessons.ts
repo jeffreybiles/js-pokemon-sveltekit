@@ -456,17 +456,25 @@ export const lessons: Lesson[] = [
     implementations: [
       {
         framework: 'SvelteKit 1.0',
+        githubUrl: 'https://github.com/jeffreybiles/js-pokedex-sveltekit/commit/6bc645c8b7a085720209d3f49bbdc890b2d1698e',
+        youtubeId: 'zgrQO58oPfk',
+        lengthInSeconds: 436,
         // releaseDate: 'Jan 15',
       }
     ],
     // TODO: may need to make implementation-specific descriptions?  Start with regular description, then do implementation-specific?
     description: `
       <p>We want to fill out the 'my-pokemon' page in our app, to show the monsters we've caught.</p>
-      <p>To do that, we'll need to track that data across components.</p>
-      <p>In Svelte, this is done with 'stores', and we'll learn about writable and observable stores.</p>
-      <p>In Nuxt this is done with 'composables', and we'll learn about a simple pattern to make this happen.</p>
+      <p>To do that, we'll need to use a writable store.</p>
     `
   },
+  // 15. do local storage to save the caught monsters - show it loading in and out, how to 'load up' stores, mention that this technique should carry over to loading from an API
+  // 16. deleting monsters - and now we need to create a random ID, and a random name addition, so we can tell them apart.  Will need to update typescript types as well.
+  // 17. dynamic routes, showing species page with the list of caught monsters (filtered manually per page)
+  // 18. Derived stores to show # of each species caught
+
+
+
   {
     id: '115',
     number: '15',
